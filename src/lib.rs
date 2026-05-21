@@ -1,5 +1,7 @@
 use chrono::{DateTime, Utc};
+use colored::*;
 use indexmap::IndexMap;
+use log::{debug, info};
 use serde::{Deserialize, Serialize};
 use std::{
     fs::File,
@@ -8,6 +10,19 @@ use std::{
 };
 use tempfile;
 
+/// Structure of the json object.
+///
+/// ```json
+/// {
+///     "repo": "git@github.com:siliconflow/BizyDraft.git",
+///     "commit": "9d7bcbad2a8b6d17165a1c2ccc27ca53d4136d24",
+///     "license": "MIT License",
+///     "notes": "BizyDraft 核心引擎与前端",
+///     "path": "BizyDraft",
+///     "updated_at": "2026-05-21T08:45:00.391906Z"
+///   }
+/// ```
+///
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct RepoInfo {
     repo: String,
@@ -26,39 +41,49 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, append: bool) 
 
     let current_time = Utc::now();
     for source_item in source {
-        println!("checking {:?}", source_item.path);
         if let Some(target_item) = target_map.get_mut(&source_item.path) {
+            info!("checking:\t {}", source_item.path.green());
+            let mut is_updated = false;
             // sync src_item -> target_item
             // sync repo
             if target_item.repo != source_item.repo {
-                println!(
-                    "update repo\t of {}: {} -> {}",
-                    target_item.path, target_item.repo, source_item.repo
+                debug!(
+                    "updating: \t {} -> {}",
+                    target_item.repo.red(),
+                    source_item.repo.blue()
                 );
                 target_item.repo = source_item.repo;
                 target_item.updated_at = Some(current_time);
+                is_updated = true;
             }
 
             // sync commit
             if target_item.commit != source_item.commit {
-                println!(
-                    "update commit\t of {}: {} -> {}",
-                    target_item.path, target_item.commit, source_item.commit
+                debug!(
+                    "updating: \t {} -> {}",
+                    target_item.commit.red(),
+                    source_item.commit.blue()
                 );
                 target_item.commit = source_item.commit;
                 target_item.updated_at = Some(current_time);
+                is_updated = true;
             }
 
             // sync license
             if target_item.license != source_item.license && source_item.license.is_some() {
                 if let Some(license) = source_item.license {
-                    println!(
-                        "update license\t of {}: {} -> {}",
-                        target_item.path,
-                        target_item.license.clone().unwrap_or(String::from("None")),
-                        license.clone()
+                    debug!(
+                        "updating: \t {} -> {}",
+                        target_item
+                            .license
+                            .as_deref()
+                            .filter(|s| !s.is_empty())
+                            .unwrap_or("None")
+                            .red(),
+                        &license.blue()
                     );
                     target_item.license = Some(license);
+                    is_updated = true;
                 }
                 target_item.updated_at = Some(current_time);
             }
@@ -66,13 +91,18 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, append: bool) 
             // sync notes
             if target_item.notes != source_item.notes && source_item.notes.is_some() {
                 if let Some(notes) = source_item.notes {
-                    println!(
-                        "update note\t of {}: {} -> {}",
-                        source_item.path,
-                        target_item.notes.clone().unwrap_or(String::from("None")),
-                        notes
+                    debug!(
+                        "updating: \t {} -> {}",
+                        target_item
+                            .notes
+                            .as_deref()
+                            .filter(|s| !s.is_empty())
+                            .unwrap_or("None")
+                            .red(),
+                        notes.blue()
                     );
                     target_item.notes = Some(notes);
+                    is_updated = true;
                 }
                 target_item.updated_at = Some(current_time);
             }
@@ -80,18 +110,61 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, append: bool) 
             // check if updated_at exists.
             if target_item.updated_at.is_none() {
                 target_item.updated_at = Some(current_time);
+                debug!(
+                    "updating: \t {} -> {}",
+                    "None".red(),
+                    current_time.to_string().blue()
+                );
+                is_updated = true;
+            }
+
+            if is_updated {
+                info!("updated: \t {}", source_item.path.blue())
             }
         } else {
             if append {
-                println!(
-                    "found new repo:\t {}, add {}",
-                    source_item.path, source_item.repo
+                info!(
+                    "new repo:\t {}, add {}",
+                    source_item.path.green(),
+                    source_item.repo.blue()
+                );
+                debug!("adding: \t {}", source_item.repo.blue());
+                debug!("adding: \t {}", source_item.commit.blue());
+                debug!(
+                    "adding: \t {}",
+                    source_item
+                        .license
+                        .as_deref()
+                        .filter(|s| !s.is_empty())
+                        .unwrap_or("None")
+                        .blue()
+                );
+                debug!(
+                    "adding: \t {}",
+                    source_item
+                        .notes
+                        .as_deref()
+                        .filter(|s| !s.is_empty())
+                        .unwrap_or("None")
+                        .blue()
+                );
+                debug!(
+                    "adding: \t {}",
+                    source_item
+                        .updated_at
+                        .unwrap_or(current_time)
+                        .to_string()
+                        .blue()
                 );
                 let mut new_item = source_item;
                 new_item.updated_at = Some(current_time);
                 target_map.insert(new_item.path.clone(), new_item);
             } else {
-                println!("skip {}: {}", source_item.path, source_item.repo)
+                info!(
+                    "skip repo:\t {}: {}",
+                    source_item.path.magenta(),
+                    source_item.repo
+                )
             }
         }
     }

@@ -1,49 +1,63 @@
-use clap::Parse;
+use clap::Parser;
+use colored::*;
+use env_logger::{self};
+use log::info;
 use skye::{read_repos_from_file, safe_write_to_file, sync_commits};
 use std::path::PathBuf;
 
-#[derive(Parse, Debug)]
+#[derive(Parser, Debug)]
 #[command(
     version = "0.0.1",
     author = "desonglll",
     about = "A cli for sync setup.json of bizyair cce dockerfile."
 )]
 struct CliArgs {
+    /// Source file path with json format.
     #[arg(short, long)]
     pub source: PathBuf,
+    /// Target file path with json format.
     #[arg(short, long)]
     pub target: PathBuf,
+    /// New target file saved path with json format.
     #[arg(short, long)]
-    pub new_target: Option<PathBuf>,
+    pub output: Option<PathBuf>,
+    /// Whether to append missing object from source to target.
     #[arg(short, long)]
     pub append: bool,
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let args = CliArgs::parse();
+    unsafe {
+        std::env::set_var("RUST_LOG", "info");
+    }
 
-    if args.new_target.is_none() {
-        args.new_target = args.target.clone();
+    env_logger::init();
+
+    let mut args = CliArgs::parse();
+
+    if args.output.is_none() {
+        args.output = Some(args.target.clone());
     };
 
-    println!("source_path: {source_path:?}");
-    println!("target_path: {target_path:?}");
-    println!("new_target_path: {new_target_path:?}");
+    info!("source_path: {:?}", args.source);
+    info!("target_path: {:?}", args.target);
+    info!("new_target_path: {:?}", args.output);
 
-    let source_repos = read_repos_from_file(&source_path)
-        .expect(&format!("failed to read from file {:?}", source_path));
+    let source_repos = read_repos_from_file(&args.source)
+        .expect(&format!("failed to read from file {:?}", &args.source));
 
-    let target_repos = read_repos_from_file(&target_path).unwrap_or_else(|_| {
-        println!("not found valid file, create a new file: {target_path:?}");
+    let target_repos = read_repos_from_file(&args.target).unwrap_or_else(|_| {
+        info!("not found valid file, create a new file: {:?}", args.target);
         Vec::new()
     });
 
-    println!(
+    info!(
         "start sync {:?} -> {:?} to {:?}",
-        source_path, target_path, new_target_path
+        args.source, args.target, args.output
     );
-    let updated_target = sync_commits(source_repos, target_repos, false);
-    println!("safely write back...");
-    safe_write_to_file(new_target_path, &updated_target)?;
+    let updated_target = sync_commits(source_repos, target_repos, args.append);
+    info!("safely write back...");
+    safe_write_to_file(args.output.unwrap_or(args.target), &updated_target)?;
+    info!("{}", String::from("success!").green());
     Ok(())
 }

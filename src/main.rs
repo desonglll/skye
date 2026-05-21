@@ -26,7 +26,7 @@ struct CliArgs {
     pub append: bool,
     /// Objects you want to ignore, which is identified by `path`.
     #[arg(short, long, num_args = 1..)]
-    pub ignore: Option<Vec<String>>
+    pub ignore: Option<Vec<String>>,
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

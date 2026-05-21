@@ -24,6 +24,9 @@ struct CliArgs {
     /// Whether to append missing object from source to target.
     #[arg(short, long)]
     pub append: bool,
+    /// Objects you want to ignore, which is identified by `path`.
+    #[arg(short, long, num_args = 1..)]
+    pub ignore: Option<Vec<String>>
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -55,7 +58,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "start sync {:?} -> {:?} to {:?}",
         args.source, args.target, args.output
     );
-    let updated_target = sync_commits(source_repos, target_repos, args.append);
+    let updated_target = sync_commits(source_repos, target_repos, args.append, args.ignore);
     info!("safely write back...");
     safe_write_to_file(args.output.unwrap_or(args.target), &updated_target)?;
     info!("{}", String::from("success!").green());

@@ -33,14 +33,27 @@ pub struct RepoInfo {
     updated_at: Option<DateTime<Utc>>,
 }
 
-pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, append: bool) -> Vec<RepoInfo> {
+pub fn sync_commits(
+    source: Vec<RepoInfo>,
+    target: Vec<RepoInfo>,
+    append: bool,
+    ignore: Option<Vec<String>>,
+) -> Vec<RepoInfo> {
     let mut target_map: IndexMap<String, RepoInfo> = target
         .into_iter()
         .map(|item| (item.path.clone(), item))
         .collect();
-
+    let ignore_list = ignore.unwrap_or(vec![]);
     let current_time = Utc::now();
     for source_item in source {
+        if ignore_list.contains(&source_item.path) {
+            info!(
+                "ignore repo:\t {}: {}",
+                source_item.path.magenta(),
+                source_item.repo
+            );
+            continue;
+        }
         if let Some(target_item) = target_map.get_mut(&source_item.path) {
             info!("checking:\t {}", source_item.path.green());
             let mut is_updated = false;
@@ -222,7 +235,7 @@ mod tests {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![];
 
-        let result = sync_commits(source, target, false);
+        let result = sync_commits(source, target, false, Some(Vec::new()));
 
         assert_eq!(result.len(), 1);
         assert_eq!(result[0].path, "repo-a");
@@ -242,7 +255,7 @@ mod tests {
         }];
         let target = vec![create_mock_repo("repo-a", "commit-old", None, None)];
 
-        let result = sync_commits(source, target, false);
+        let result = sync_commits(source, target, false, Some(Vec::new()));
 
         assert_eq!(result.len(), 1);
         assert_eq!(result[0].commit, "commit-new");
@@ -265,7 +278,7 @@ mod tests {
             Some("Old Note"),
         )];
 
-        let result = sync_commits(source, target, false);
+        let result = sync_commits(source, target, false, Some(Vec::new()));
 
         assert_eq!(result.len(), 1);
 
@@ -280,7 +293,7 @@ mod tests {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
 
-        let result = sync_commits(source, target, false);
+        let result = sync_commits(source, target, false, Some(Vec::new()));
 
         assert_eq!(result.len(), 1);
 

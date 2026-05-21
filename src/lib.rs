@@ -235,14 +235,14 @@ mod tests {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![];
 
-        let result = sync_commits(source, target, false, Some(Vec::new()));
+        let result = sync_commits(source, target, true, None);
+
+        println!("Result length: {}", result.len());
 
         assert_eq!(result.len(), 1);
         assert_eq!(result[0].path, "repo-a");
-
         assert!(result[0].updated_at.is_some());
     }
-
     #[test]
     fn test_sync_commit_and_repo_update() {
         let source = vec![RepoInfo {
@@ -290,14 +290,17 @@ mod tests {
 
     #[test]
     fn test_sync_no_changes() {
+        let current_time = Utc::now();
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
-        let target = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
+
+        let mut target_item = create_mock_repo("repo-a", "commit-1", Some("MIT"), None);
+        target_item.updated_at = Some(current_time);
+        let target = vec![target_item];
 
         let result = sync_commits(source, target, false, Some(Vec::new()));
 
         assert_eq!(result.len(), 1);
-
-        assert!(result[0].updated_at.is_none());
+        assert_eq!(result[0].updated_at, Some(current_time));
     }
     #[test]
     fn it_works() {

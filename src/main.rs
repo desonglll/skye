@@ -25,12 +25,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let source_repos = read_repos_from_file(&args.source)
         .expect(&format!("failed to read from file {:?}", &args.source));
 
-    for s in &source_repos{
-        if s.path == "custom_nodes/ComfyUI-Easy-Use" {
-            debug!("source_repo {:?}", s);
-        }
-    }
-
     let target_repos = read_repos_from_file(&args.target).unwrap_or_else(|_| {
         info!("not found valid file, create a new file: {:?}", args.target);
         Vec::new()

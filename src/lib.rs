@@ -61,6 +61,9 @@ impl Default for CliArgs {
 ///     "license": "MIT License",
 ///     "notes": "BizyDraft 核心引擎与前端",
 ///     "path": "BizyDraft",
+///     "blacklist": [
+///         "black_one"
+///     ],
 ///     "updated_at": "2026-05-21T08:45:00.391906Z"
 ///   }
 /// ```
@@ -71,12 +74,12 @@ pub struct RepoInfo {
     commit: String,
     license: Option<String>,
     notes: Option<String>,
-    pub path: String,
+    path: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     updated_at: Option<DateTime<FixedOffset>>,
     #[serde(skip_serializing_if = "Option::is_none")]
     #[serde(rename = "blacklist")]
-    pub black_list: Option<Vec<String>>,
+    black_list: Option<Vec<String>>,
 }
 
 pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs) -> Vec<RepoInfo> {

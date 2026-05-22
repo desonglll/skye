@@ -307,15 +307,16 @@ mod tests {
     fn test_sync_new_repo_added() {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![];
-        let args = CliArgs::default();
-        dbg!(&args);
+        let args = CliArgs {
+            append: true,
+            ..CliArgs::default()
+        };
 
         let result = sync_commits(source, target, &args);
-        dbg!(&result);
 
         println!("Result length: {}", result.len());
 
-        assert_eq!(result.len(), 0);
+        assert_eq!(result.len(), 1);
         assert_eq!(result[0].path, "repo-a");
         assert!(result[0].updated_at.is_some());
     }

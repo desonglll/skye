@@ -1,4 +1,4 @@
-use chrono::{DateTime, Utc};
+use chrono::{DateTime, FixedOffset, Utc};
 use colored::*;
 use indexmap::IndexMap;
 use log::{debug, info};
@@ -30,7 +30,7 @@ pub struct RepoInfo {
     license: Option<String>,
     notes: Option<String>,
     path: String,
-    updated_at: Option<DateTime<Utc>>,
+    updated_at: Option<DateTime<FixedOffset>>,
 }
 
 pub fn sync_commits(
@@ -44,7 +44,8 @@ pub fn sync_commits(
         .map(|item| (item.path.clone(), item))
         .collect();
     let ignore_list = ignore.unwrap_or(vec![]);
-    let current_time = Utc::now();
+    let shanghai_tz = FixedOffset::east_opt(8 * 3600 ).unwrap();
+    let current_time: DateTime<FixedOffset> = Utc::now().with_timezone(&shanghai_tz);
     for source_item in source {
         if ignore_list.contains(&source_item.path) {
             info!(
@@ -290,7 +291,8 @@ mod tests {
 
     #[test]
     fn test_sync_no_changes() {
-        let current_time = Utc::now();
+        let shanghai_tz = FixedOffset::east_opt(8*3600).unwrap();
+        let current_time = Utc::now().with_timezone(&shanghai_tz);
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
 
         let mut target_item = create_mock_repo("repo-a", "commit-1", Some("MIT"), None);

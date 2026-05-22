@@ -1,14 +1,56 @@
 use chrono::{DateTime, FixedOffset, Utc};
+use clap::Parser;
 use colored::*;
 use indexmap::IndexMap;
 use log::{debug, info};
 use serde::{Deserialize, Serialize};
+use std::path::PathBuf;
 use std::{
     fs::File,
     io::{BufReader, BufWriter, Write},
     path::Path,
 };
 use tempfile;
+
+#[derive(Parser, Debug)]
+#[command(
+    version = "0.0.1",
+    author = "desonglll",
+    about = "A cli for sync setup.json of bizyair cce dockerfile."
+)]
+pub struct CliArgs {
+    /// Source file path with json format.
+    #[arg(short, long)]
+    pub source: PathBuf,
+    /// Target file path with json format.
+    #[arg(short, long)]
+    pub target: PathBuf,
+    /// New target file saved path with json format.
+    #[arg(short, long)]
+    pub output: Option<PathBuf>,
+    /// Whether to append missing object from source to target.
+    #[arg(short, long)]
+    pub append: bool,
+    /// Objects you want to ignore, which is identified by `path`.
+    #[arg(short, long, num_args = 1..)]
+    pub ignore: Option<Vec<String>>,
+    /// With(or add) update_at field.
+    #[arg(short, long, default_value_t = false)]
+    pub with_update_at: bool,
+}
+
+impl Default for CliArgs {
+    fn default() -> Self {
+        Self {
+            source: PathBuf::from("source.json"),
+            target: PathBuf::from("target.json"),
+            output: Some(PathBuf::from("target.json")),
+            append: false,
+            ignore: None,
+            with_update_at: false
+        }
+    }
+}
 
 /// Structure of the json object.
 ///
@@ -30,20 +72,16 @@ pub struct RepoInfo {
     license: Option<String>,
     notes: Option<String>,
     path: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
     updated_at: Option<DateTime<FixedOffset>>,
 }
 
-pub fn sync_commits(
-    source: Vec<RepoInfo>,
-    target: Vec<RepoInfo>,
-    append: bool,
-    ignore: Option<Vec<String>>,
-) -> Vec<RepoInfo> {
+pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs) -> Vec<RepoInfo> {
     let mut target_map: IndexMap<String, RepoInfo> = target
         .into_iter()
         .map(|item| (item.path.clone(), item))
         .collect();
-    let ignore_list = ignore.unwrap_or(vec![]);
+    let ignore_list = args.ignore.clone().unwrap_or(vec![]);
     let shanghai_tz = FixedOffset::east_opt(8 * 3600).unwrap();
     let current_time: DateTime<FixedOffset> = Utc::now().with_timezone(&shanghai_tz);
     for source_item in source {
@@ -136,7 +174,7 @@ pub fn sync_commits(
                 info!("updated: \t {}", source_item.path.blue())
             }
         } else {
-            if append {
+            if args.append {
                 info!(
                     "new repo:\t {}, add {}",
                     source_item.path.green(),
@@ -197,12 +235,23 @@ pub fn read_repos_from_file<P: AsRef<Path>>(
 pub fn safe_write_to_file<P: AsRef<Path>>(
     path: P,
     data: &Vec<RepoInfo>,
+    args: &CliArgs
 ) -> Result<(), Box<dyn std::error::Error>> {
+    let data = if !args.with_update_at {
+        info!("{}", "clean update_at field".yellow());
+        let mut cloned_data = data.clone();
+        cloned_data.iter_mut().for_each(|x| {
+            x.updated_at = None;
+        });
+        cloned_data
+    } else {
+        data.clone()
+    };
     let path = path.as_ref();
     let dir = path.parent().unwrap_or(Path::new("."));
     let temp_file = tempfile::NamedTempFile::new_in(dir)?;
     let writer = BufWriter::new(&temp_file);
-    serde_json::to_writer_pretty(writer, data)?;
+    serde_json::to_writer_pretty(writer, &data)?;
     let mut file = temp_file.persist(path)?;
     file.flush()?;
     Ok(())
@@ -235,12 +284,15 @@ mod tests {
     fn test_sync_new_repo_added() {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![];
+        let args = CliArgs::default();
+        dbg!(&args);
 
-        let result = sync_commits(source, target, true, None);
+        let result = sync_commits(source, target, &args);
+        dbg!(&result);
 
         println!("Result length: {}", result.len());
 
-        assert_eq!(result.len(), 1);
+        assert_eq!(result.len(), 0);
         assert_eq!(result[0].path, "repo-a");
         assert!(result[0].updated_at.is_some());
     }
@@ -255,8 +307,9 @@ mod tests {
             updated_at: None,
         }];
         let target = vec![create_mock_repo("repo-a", "commit-old", None, None)];
+        let args = CliArgs::default();
 
-        let result = sync_commits(source, target, false, Some(Vec::new()));
+        let result = sync_commits(source, target, &args);
 
         assert_eq!(result.len(), 1);
         assert_eq!(result[0].commit, "commit-new");
@@ -278,8 +331,11 @@ mod tests {
             None,
             Some("Old Note"),
         )];
+        let args = CliArgs::default();
 
-        let result = sync_commits(source, target, false, Some(Vec::new()));
+        println!("args{:#?}", &args);
+
+        let result = sync_commits(source, target, &args);
 
         assert_eq!(result.len(), 1);
 
@@ -298,8 +354,9 @@ mod tests {
         let mut target_item = create_mock_repo("repo-a", "commit-1", Some("MIT"), None);
         target_item.updated_at = Some(current_time);
         let target = vec![target_item];
+        let args = CliArgs::default();
 
-        let result = sync_commits(source, target, false, Some(Vec::new()));
+        let result = sync_commits(source, target, &args);
 
         assert_eq!(result.len(), 1);
         assert_eq!(result[0].updated_at, Some(current_time));

@@ -1,33 +1,9 @@
+use std::process::exit;
 use clap::Parser;
 use colored::*;
 use env_logger::{self};
 use log::info;
-use skye::{read_repos_from_file, safe_write_to_file, sync_commits};
-use std::path::PathBuf;
-
-#[derive(Parser, Debug)]
-#[command(
-    version = "0.0.1",
-    author = "desonglll",
-    about = "A cli for sync setup.json of bizyair cce dockerfile."
-)]
-struct CliArgs {
-    /// Source file path with json format.
-    #[arg(short, long)]
-    pub source: PathBuf,
-    /// Target file path with json format.
-    #[arg(short, long)]
-    pub target: PathBuf,
-    /// New target file saved path with json format.
-    #[arg(short, long)]
-    pub output: Option<PathBuf>,
-    /// Whether to append missing object from source to target.
-    #[arg(short, long)]
-    pub append: bool,
-    /// Objects you want to ignore, which is identified by `path`.
-    #[arg(short, long, num_args = 1..)]
-    pub ignore: Option<Vec<String>>,
-}
+use skye::{CliArgs, read_repos_from_file, safe_write_to_file, sync_commits};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     unsafe {
@@ -58,9 +34,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "start sync {:?} -> {:?} to {:?}",
         args.source, args.target, args.output
     );
-    let updated_target = sync_commits(source_repos, target_repos, args.append, args.ignore);
+    let updated_target = sync_commits(source_repos, target_repos, &args);
     info!("safely write back...");
-    safe_write_to_file(args.output.unwrap_or(args.target), &updated_target)?;
+    match args.output.clone() {
+        None => {
+            eprintln!("not a valid output path: None");
+            exit(1);
+        }
+        Some(output) => {
+            safe_write_to_file(output, &updated_target, &args)?;
+        }
+    }
     info!("{}", String::from("success!").green());
     Ok(())
 }

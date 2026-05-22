@@ -1,1522 +1,1342 @@
 [
-  {
-    "repo": "git@github.com:siliconflow/BizyDraft.git",
-    "commit": "9d7bcbad2a8b6d17165a1c2ccc27ca53d4136d24",
-    "license": "MIT License",
-    "notes": "BizyDraft 核心引擎与前端",
-    "path": "BizyDraft",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI.git",
-    "commit": "8f374716ee98d378d403ebc61250e091ecd3a25c",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI 主体",
-    "path": "ComfyUI",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/BizyAir.git",
-    "commit": "v1.2.7",
-    "license": "MIT License",
-    "notes": "BizyAir 工作流使用的节点",
-    "path": "custom_nodes/BizyAir",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:chflame163/ComfyUI_LayerStyle.git",
-    "commit": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
-    "license": "MIT License",
-    "notes": "A set of nodes for ComfyUI that can composite layer and mask to achieve Photoshop like functionality.",
-    "path": "custom_nodes/ComfyUI_LayerStyle",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-KJNodes.git",
-    "commit": "db419cd37b237b60efef67b3cf5e074c19730386",
-    "license": "GPL-3.0 license",
-    "notes": "Various custom nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-KJNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:rgthree/rgthree-comfy.git",
-    "commit": "8ff50e4521881eca1fe26aec9615fc9362474931",
-    "license": "MIT license",
-    "notes": "Making ComfyUI more comfortable!",
-    "path": "custom_nodes/rgthree-comfy",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-Custom-Scripts.git",
-    "commit": "68558e32747bc9501918c76624380e2ba1500ac7",
-    "license": "MIT license",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Custom-Scripts",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI_LayerStyle_Advance.git",
-    "commit": "1de198c4c0cd6109068476b4bdb8cdd45360a0e3",
-    "license": "MIT License",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI_LayerStyle_Advance",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:cubiq/ComfyUI_essentials.git",
-    "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI_essentials",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ltdrdata/ComfyUI-Impact-Pack.git",
-    "commit": "6a517ebe06fea2b74fc41b3bd089c0d7173eeced",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Impact-Pack",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jakechai/ComfyUI-JakeUpgrade.git",
-    "commit": "4c1a84ad63ef6e003086469c6ae72559f3183985",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-JakeUpgrade",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jjkramhoeft/ComfyUI-Jjk-Nodes.git",
-    "commit": "b3c99bb78a99551776b5eab1a820e1cd58f84f31",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Jjk-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:mirabarukaso/ComfyUI_Mira.git",
-    "commit": "9cbffb14afddaff2a982cc86288ff0a7d9277ce8",
-    "license": "",
-    "notes": "A custom node for ComfyUI to improve all those custom nodes I feel not comfortable in my workflow.",
-    "path": "custom_nodes/ComfyUI_Mira",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Suzie1/ComfyUI_Comfyroll_CustomNodes.git",
-    "commit": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
-    "license": "",
-    "notes": "Custom nodes for SDXL and SD1.5 including Multi-ControlNet, LoRA, Aspect Ratio, Process Switches, and many more nodes",
-    "path": "custom_nodes/ComfyUI_Comfyroll_CustomNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:gseth/ControlAltAI-Nodes.git",
-    "commit": "721492b66c9cede8ae23ae10615462ad80cfd061",
-    "license": "",
-    "notes": "Quality of Life ComfyUI nodes from ControlAltAI.",
-    "path": "custom_nodes/ControlAltAI-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:yolain/ComfyUI-Easy-Use.git",
-    "commit": "e900c2ca9c0d90b0896881910ca7f3f02d88ebd8",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Easy-Use",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jamesWalker55/comfyui-various.git",
-    "commit": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
-    "license": "MIT license",
-    "notes": "This repository provides various nodes for use in ComfyUI.",
-    "path": "custom_nodes/comfyui-various",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lquesada/ComfyUI-Inpaint-CropAndStitch.git",
-    "commit": "b432b2411cbb7d3192d35953bd3aafea05a0e245",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Inpaint-CropAndStitch",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:melMass/comfy_mtb.git",
-    "commit": "71f601094ad03172d8f64d06df911dd9e7df4fe1",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/comfy_mtb",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/kijai/ComfyUI-IC-Light.git",
-    "commit": "22811d903af8a90100dccef1c4b579526649a6ab",
-    "license": "Apache-2.0 license",
-    "notes": "方便用户在生成图像时进行一致的光照（relighting）效果控制",
-    "path": "custom_nodes/ComfyUI-IC-Light",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-VideoHelperSuite.git",
-    "commit": "86e1037e1e3683c536a2d2ba75fe5663e5466750",
-    "license": "GPL-3.0",
-    "notes": "增强 ComfyUI 视频处理能力, 如将视频转为图像",
-    "path": "custom_nodes/ComfyUI-VideoHelperSuite",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:city96/ComfyUI-GGUF.git",
-    "commit": "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
-    "license": "Apache-2.0 license",
-    "notes": "GGUF 量化支持原生 ComfyUI 模型",
-    "path": "custom_nodes/ComfyUI-GGUF",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/chrisgoringe/cg-use-everywhere",
-    "commit": "a834f09f3889264f192711971ca624128650a250",
-    "license": "Apache-2.0 license",
-    "notes": "UE Nodes  UE 节点",
-    "path": "custom_nodes/cg-use-everywhere",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/siliconflow/ComfyAgent-auxiliary-tools.git",
-    "commit": "d149d094eb1a41a993b3cf9814bd4ec3aa57005e",
-    "license": "MIT License",
-    "notes": "在每个节点执行完毕之后都发送一个 SiliconFlow.metrics.executed 事件，返回该节点执行时间",
-    "path": "custom_nodes/ComfyAgent-auxiliary-tools",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Kosinkadink/ComfyUI-AnimateDiff-Evolved.git",
-    "commit": "a34036b662d69d155a4536b2ac65483ae941e257",
-    "license": "Apache-2.0",
-    "notes": "Improved AnimateDiff for ComfyUI and Advanced Sampling Support",
-    "path": "custom_nodes/ComfyUI-AnimateDiff-Evolved",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/kijai/ComfyUI-SUPIR.git",
-    "commit": "c5cb1ce099c56c2bdea57e19beb5105bdaa7c429",
-    "license": "",
-    "notes": "放大节点包装",
-    "path": "custom_nodes/ComfyUI-SUPIR",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/EllangoK/ComfyUI-post-processing-nodes.git",
-    "commit": "c49a05254795403648f2c1774b6f5ea39f96e7d5",
-    "license": "GPL-3.0",
-    "notes": "为ComfyUI提供的一系列后处理节点，能够实现多种视觉上引人注目的图像效果",
-    "path": "custom_nodes/ComfyUI-post-processing-nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/comfyui_controlnet_aux.git",
-    "commit": "a2585b65e5e6699009129003afdba904be10f765",
-    "license": "Apache-2.0",
-    "notes": "即插即用ComfyUI节点集，用于制作ControlNet提示图像",
-    "path": "custom_nodes/comfyui_controlnet_aux",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait.git",
-    "commit": "3bba732915e22f18af0d221b9c5c282990181f1b",
-    "license": "",
-    "notes": "AdvancedLivePortrait更快，并且具有实时预览功能",
-    "path": "custom_nodes/ComfyUI-AdvancedLivePortrait",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git",
-    "commit": "50c7b71a6a224734cc9b21963c6d1926816a97f1",
-    "license": "AGPL-3.0 license",
-    "notes": " a complement to the Impact Pack",
-    "path": "custom_nodes/ComfyUI-Impact-Subpack",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/kijai/ComfyUI-FramePackWrapper.git",
-    "commit": "a7c4b704455aee0d016143f2fc232928cc0f1d83",
-    "license": "Apache-2.0 license",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-FramePackWrapper",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-WanVideoWrapper.git",
-    "commit": "df8f3e49daaad117cf3090cc916c83f3d001494c",
-    "license": "Apache-2.0 license",
-    "notes": "KijAI 的 Wan Video 节点",
-    "path": "custom_nodes/ComfyUI-WanVideoWrapper",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ClownsharkBatwing/RES4LYF.git",
-    "commit": "7750bf7800b6ad9d670308a09989fc0c04c40cec",
-    "license": "",
-    "notes": "社区的一个插件，里面包含自定义的 samplers 方法，群友推荐说商业级别的作品需要这个",
-    "path": "custom_nodes/RES4LYF",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/siliconflow/ComfyUI_UltimateSDUpscale.git",
-    "commit": "6dbdd1e65d140e78b9a7ba25120f104166bf2ece",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI nodes for the Ultimate Stable Diffusion Upscale script by Coyote-A.",
-    "path": "custom_nodes/ComfyUI_UltimateSDUpscale",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jax-explorer/ComfyUI-easycontrol.git",
-    "commit": "c7ccd069b0a23823a4146b03ced2172fd5026713",
-    "license": "AGPL-3.0 license",
-    "notes": "ComfyUI EasyControl Nodes 是为 ComfyUI 提供的一组节点，允许您加载和使用 EasyControl 模型。",
-    "path": "custom_nodes/ComfyUI-easycontrol",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:TTPlanetPig/Comfyui_TTP_Toolset.git",
-    "commit": "981ae4020e7ae103b913f004e51653a3483003f4",
-    "license": "MIT License",
-    "notes": "for tile the image for advanced control or modification",
-    "path": "custom_nodes/Comfyui_TTP_Toolset",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/Comfyui-reactor-node.git",
-    "commit": "75eb4628105a0e3c10f0bf7ecdb1d60944d7d146",
-    "license": "GPL-3.0 license",
-    "notes": "The Fast and Simple Face Swap Extension Node for ComfyUI, based on ReActor SD-WebUI Face Swap Extension",
-    "path": "custom_nodes/Comfyui_reactor_node",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-SeedVR2_VideoUpscaler.git",
-    "commit": "4490bd1f482e026674543386bb2a4d176da245b9",
-    "license": "MIT License",
-    "notes": "Official release of SeedVR2 for ComfyUI that enables Upscale Video/Images generation.",
-    "path": "custom_nodes/ComfyUI-SeedVR2_VideoUpscaler",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:sipherxyz/comfyui-art-venture.git",
-    "commit": "6df1bc229857e10fdc66b543efa3f6a8587dcdfd",
-    "license": "MIT License",
-    "notes": "A comprehensive set of custom nodes for ComfyUI, focusing on utilities for image processing, JSON manipulation, model operations and working with object via URLs",
-    "path": "custom_nodes/ComfyUI-Art-Venture",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:SLAPaper/ComfyUI-Image-Selector.git",
-    "commit": "058846b177626a226590d355a342ae8f364591ac",
-    "license": "MIT License",
-    "notes": "ComfyUI Image Selector Node",
-    "path": "custom_nodes/ComfyUI-Image-Selector",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:11dogzi/Comfyui-HYPIR.git",
-    "commit": "5118cd619a8399290d0e10f923e3db26d29886be",
-    "license": "",
-    "notes": "这是一个用于 HYPIR（利用扩散得分先验进行图像修复） 的 ComfyUI 插件，HYPIR 是基于 Stable Diffusion 2.1 的先进图像修复模型",
-    "path": "custom_nodes/ComfyUI-HYPIR",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Fannovel16/ComfyUI-Frame-Interpolation.git",
-    "commit": "a969c01dbccd9e5510641be04eb51fe93f6bfc3d",
-    "license": "MIT license",
-    "notes": "A custom node set for Video Frame Interpolation in ComfyUI. UPDATE Memory management is improved. Now this extension takes less RAM and VRAM than before.",
-    "path": "custom_nodes/ComfyUI-Frame-Interpolation",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ShmuelRonen/ComfyUI-VideoUpscale_WithModel.git",
-    "commit": "1f437040cfd1582e3a04cea144aaccfbf7baf7b6",
-    "license": "MIT license",
-    "notes": "A memory-efficient implementation for upscaling videos in ComfyUI using non-diffusion upscaling models. This custom node is designed to handle large video frame sequences without memory bottlenecks.",
-    "path": "custom_nodes/ComfyUI-VideoUpscale_WithModel",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:BadCafeCode/execution-inversion-demo-comfyui.git",
-    "commit": "d9eebfaa1a6a33067e8c9108ef093b48279c4cbb",
-    "license": "",
-    "notes": "ComfyUI nodes for the execution inversion demo",
-    "path": "custom_nodes/ComfyUI-Execution-Inversion-Demo",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:SeargeDP/SeargeSDXL.git",
-    "commit": "2eb5edbc712329d77d1a2f5f1e6c5e64397a4a83",
-    "license": "MIT license",
-    "notes": "Custom nodes extension for ComfyUI, including a workflow to use SDXL 1.0 with both the base and refiner checkpoints.",
-    "path": "custom_nodes/SeargeSDXL",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-CGR-IO-Bridge.git",
-    "commit": "60ba47aeef6d5a23728a38351f4d3b9b622182ba",
-    "license": "",
-    "notes": "CGR 需要的转换接口节点",
-    "path": "custom_nodes/ComfyUI-CGR-IO-Bridge",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:nullquant/ComfyUI-BrushNet.git",
-    "commit": "505d8ef917ddf3896afd1926770ecc9b099704e2",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for the BrushNet model",
-    "path": "custom_nodes/ComfyUI-BrushNet",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:cubiq/ComfyUI_IPAdapter_plus.git",
-    "commit": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-    "license": "GPL-3.0 license",
-    "notes": "The IPAdapter are very powerful models for image-to-image conditioning. The subject or even just the style of the reference image(s) can be easily transferred to a generation. Think of it as a 1-image lora.",
-    "path": "custom_nodes/ComfyUI_IPAdapter_plus",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Lightricks/ComfyUI-LTXVideo.git",
-    "commit": "531512f7286963dc7aff1fd8bf5556e95eae03af",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI-LTXVideo is a collection of custom nodes for ComfyUI, designed to provide useful tools for working with the LTXV model. The model itself is supported in the core ComfyUI code. The main LTXVideo repository can be found here.",
-    "path": "custom_nodes/ComfyUI-LTXVideo",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-LivePortraitKJ.git",
-    "commit": "4d9dc6205b793ffd0fb319816136d9b8c0dbfdff",
-    "license": "MIT License",
-    "notes": "Official release of LivePortraitKJ for ComfyUI that enables Live Portrait generation.",
-    "path": "custom_nodes/ComfyUI-LivePortraitKJ",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:twri/sdxl_prompt_styler.git",
-    "commit": "51068179927f79dce14f38c6b1984390ab242be2",
-    "license": "MIT License",
-    "notes": "SDXL Prompt Styler is a node that enables you to style prompts based on predefined templates stored in multiple JSON files. The node specifically replaces a {prompt} placeholder in the 'prompt' field of each template with provided positive text.",
-    "path": "custom_nodes/ComfyUI-SDXL-Prompt-Styler",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:huchenlei/ComfyUI-layerdiffuse.git",
-    "commit": "b4f6a9e024064a4489f774a8b91049ce0b606ea3",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for the layerdiffuse model",
-    "path": "custom_nodes/ComfyUI-layerdiffuse",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:cubiq/ComfyUI_InstantID.git",
-    "commit": "72495e806bc2ab9c41581e15ccaa1bcf83c477e8",
-    "license": "Apache-2.0 license",
-    "notes": "此扩展不同于许多已可用的扩展，因为它不使用 diffusers，而是原生实现了 InstantID，并且与 ComfyUI 完全集成。",
-    "path": "custom_nodes/ComfyUI_InstantID",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:MixLabPro/comfyui-mixlab-nodes.git",
-    "commit": "32b22c39cbe13b46df29ef1b6ab088c2eb4389d2",
-    "license": "MIT license",
-    "notes": "ComfyUI nodes for the MixLab model",
-    "path": "custom_nodes/ComfyUI-MixLab",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jags111/efficiency-nodes-comfyui.git",
-    "commit": "f0971b5553ead8f6e66bb99564431e2590cd3981",
-    "license": "GPL-3.0 license",
-    "notes": "A collection of ComfyUI custom nodes.- Awesome smart way to work with nodes!",
-    "path": "custom_nodes/ComfyUI-Efficiency-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:pythongosssss/ComfyUI-WD14-Tagger.git",
-    "commit": "9e0a6e700299182fc05c58b62e7ad9f72182a78b",
-    "license": "MIT license",
-    "notes": "A ComfyUI extension allowing for the interrogation of booru tags from images.",
-    "path": "custom_nodes/ComfyUI-WD14-Tagger",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:chibiace/ComfyUI-Chibi-Nodes.git",
-    "commit": "424d5fc68bd3b82fe3c491f27b0c37bb3de1d123",
-    "license": "MIT license",
-    "notes": "A pack of nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-Chibi-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:crystian/ComfyUI-Crystools.git",
-    "commit": "2af9ccf0a29c6910e6fcbdd7d2fe96f9bde44eed",
-    "license": "MIT license",
-    "notes": "A pack of nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-Crystools",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:1038lab/ComfyUI-FireRedTTS.git",
-    "commit": "e72a987e3d2a1f768dff6fd5c5324795db3a05f7",
-    "license": "GPL-3.0 license",
-    "notes": "A ComfyUI integration for FireRedTTS‑2.",
-    "path": "custom_nodes/ComfyUI-FireRedTTS",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:yuvraj108c/ComfyUI-Whisper.git",
-    "commit": "c67c040559c013833dedb0737df14182dc5043cc",
-    "license": "CC BY-NC-SA 4.0 licenses",
-    "notes": "Transcribe audio and add subtitles to videos using Whisper in ComfyUI.",
-    "path": "custom_nodes/ComfyUI-Whisper",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:billwuhao/ComfyUI_IndexTTS.git",
-    "commit": "e88d59465f40f6bb3fce2590fad785faab1098de",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for the IndexTTS model",
-    "path": "custom_nodes/ComfyUI_IndexTTS",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:yolain/ComfyUI-Easy-IndexTTS2.git",
-    "commit": "da020b3d1ae4652ee31ffbdbb38a9323814db620",
-    "license": "bilibili Model Use License",
-    "notes": "ComfyUI nodes for the Easy-IndexTTS2 model",
-    "path": "custom_nodes/ComfyUI-Easy-IndexTTS2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lcolok/ComfyUI-MagicAI.git",
-    "commit": "c4a6ec6a7dfeb330cd17c938f45fd988e007fb70",
-    "license": "",
-    "notes": "group friend's cutom nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-MagicAI",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-segment-anything-2.git",
-    "commit": "4a405f958ce95eeb40f9787ea7998cf1b3cdefcd",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for the Segment Anything 2 model",
-    "path": "custom_nodes/ComfyUI-segment-anything-2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/comfyui-tensorops.git",
-    "commit": "e3ef8f39a09d1f87652dc911b7d0686d85e59595",
-    "license": "MIT license",
-    "notes": "A set of tensor operation nodes for ComfyUI",
-    "path": "custom_nodes/comfyui-tensorops",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-WanAnimatePreprocess.git",
-    "commit": "1a35b81a418bbba093356ad19b19bf2a76a24f4e",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for the Wan Animate Preprocess model",
-    "path": "custom_nodes/ComfyUI-WanAnimatePreprocess",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:1038lab/ComfyUI-RMBG.git",
-    "commit": "d7402513f23f58db7d56754b02a4f51a148b4941",
-    "license": "GPL-3.0 license",
-    "notes": "A ComfyUI integration for Remove.bg background removal service.",
-    "path": "custom_nodes/ComfyUI-RMBG",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Acly/comfyui-inpaint-nodes.git",
-    "commit": "1e2543e5619b3f6e88b7727243c8b9c5791a7b4a",
-    "license": "GPL-3.0 license",
-    "notes": "A set of inpainting nodes for ComfyUI",
-    "path": "custom_nodes/comfyui-inpaint-nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:TTPlanetPig/Comfyui_Object_Detect_QWen_VL.git",
-    "commit": "e52da9b3064fe2792dc5c5e78658a3c756d5d629",
-    "license": "",
-    "notes": "ComfyUI nodes for Object Detection using Qwen-VL model",
-    "path": "custom_nodes/Comfyui_Object_Detect_QWen_VL",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-MelBandRoFormer.git",
-    "commit": "b40e263224778ec417114d91d8b3b39934e30de5",
-    "license": "",
-    "notes": "ComfyUI nodes for MelBandRoFormer model",
-    "path": "custom_nodes/ComfyUI-MelBandRoFormer",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:pamparamm/sd-perturbed-attention.git",
-    "commit": "2be8d83fa44dc0f28baf7be8122e57ed5d7165c3",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes for the Perturbed Attention model",
-    "path": "custom_nodes/sd-perturbed-attention",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lrzjason/Comfyui-QwenEditUtils.git",
-    "commit": "098b881549abe7a88fd305b6a2e333598d9488d8",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for QwenEditUtils",
-    "path": "custom_nodes/Comfyui-QwenEditUtils",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:TTPlanetPig/Comfyui_JC2.git",
-    "commit": "69a7d6830807d65595da8848f1169a261c5dff5e",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI nodes for JoyCaption2",
-    "path": "custom_nodes/Comfyui_JC2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "https://github.com/sh570655308/Comfyui-RayNodes",
-    "commit": "0dd2b9c1ae55a0925ccd5b9b862829646e8f4513",
-    "license": "MIT License",
-    "notes": "A collection of custom nodes for ComfyUI that provide various functionalities such as image processing, model management, and workflow enhancements.",
-    "path": "custom_nodes/Comfyui-RayNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:WASasquatch/was-node-suite-comfyui.git",
-    "commit": "ea935d1044ae5a26efa54ebeb18fe9020af49a45",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/was-node-suite-comfyui",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:fssorc/ComfyUI_FaceShaper.git",
-    "commit": "308ed8fc92db8b30da59c58b48a5e01da013d021",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI nodes for the FaceShaper model",
-    "path": "custom_nodes/ComfyUI_FaceShaper",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:MeeeyoAI/ComfyUI_StringOps.git",
-    "commit": "d683188ef829c14be8f1a05385345583bd82ee50",
-    "license": "",
-    "notes": "A set of string operation nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-StringOps",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-GIMM-VFI.git",
-    "commit": "4c9a3123762af85e7c796e41737da0b70c75d72d",
-    "license": "S-Lab License 1.0",
-    "notes": "ComfyUI nodes for the GIMM VFI model",
-    "path": "custom_nodes/ComfyUI-GIMM-VFI",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:whmc76/ComfyUI-UniversalToolkit.git",
-    "commit": "ca49258023d2c8dfbc67c03ccfff69739d55e55f",
-    "license": "MIT License",
-    "notes": "A collection of utility nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-UniversalToolkit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:theUpsider/ComfyUI-Logic.git",
-    "commit": "214cfba933291be224156d37bc30c25742076b44",
-    "license": "",
-    "notes": "A set of logic operation nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-Logic",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:scraed/LanPaint.git",
-    "commit": "2c8f4baec0290d488ff873979b0f3d789216fc6d",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI nodes for the LanPaint model",
-    "path": "custom_nodes/LanPaint",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:LAOGOU-666/Comfyui_LG_Tools.git",
-    "commit": "4c429f4a07ee12d664415cbcff0ea6e491101db8",
-    "license": "MIT License",
-    "notes": "A collection of useful tools for ComfyUI",
-    "path": "custom_nodes/Comfyui_LG_Tools",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/Comfyui-SecNodes.git",
-    "commit": "ed1923a6dab91487c277d8e2a0602fba87ff416b",
-    "license": "Apache-2.0 license",
-    "notes": "A set of security-related nodes for ComfyUI",
-    "path": "custom_nodes/Comfyui-SecNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:M1kep/ComfyLiterals.git",
-    "commit": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
-    "license": "",
-    "notes": "A set of literal value nodes for ComfyUI",
-    "path": "custom_nodes/ComfyLiterals",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Derfuu/Derfuu_ComfyUI_ModdedNodes.git",
-    "commit": "d0905bed31249f2bd0814c67585cf4fe3c77c015",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/Derfuu_ComfyUI_ModdedNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:yuvraj108c/ComfyUI_InvSR.git",
-    "commit": "98e52dd07d500c91d57b5cf8b7e9994790cb6f1b",
-    "license": "S-Lab License 1.0",
-    "notes": "This project is a ComfyUI wrapper for InvSR (Arbitrary-steps Image Super-resolution via Diffusion Inversion)",
-    "path": "custom_nodes/ComfyUI_InvSR",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-TeaCache.git",
-    "commit": "aaa34d818ca4ce55b282ffd3578043b7924037bc",
-    "license": "Apache-2.0 license",
-    "notes": "This project is a ComfyUI extension for TeaCache (Efficient workflow caching system for ComfyUI)",
-    "path": "custom_nodes/ComfyUI-TeaCache",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-Florence2.git",
-    "commit": "00b63382966a444a9fefacb65b8deb188d12a458",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes for the Florence2 model",
-    "path": "custom_nodes/ComfyUI-Florence2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Jonseed/ComfyUI-Detail-Daemon.git",
-    "commit": "f391accbda2d309cdcbec65cb9fcc80a41197b20",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes for the Detail Daemon model",
-    "path": "custom_nodes/ComfyUI-Detail-Daemon",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:gameltb/Comfyui-StableSR.git",
-    "commit": "fb6010436f6eb21037ab12dbcbf078a9d4021187",
-    "license": "",
-    "notes": "ComfyUI nodes for StableSR model",
-    "path": "custom_nodes/Comfyui-StableSR",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:BadCafeCode/masquerade-nodes-comfyui.git",
-    "commit": "432cb4d146a391b387a0cd25ace824328b5b61cf",
-    "license": "MIT License",
-    "notes": "It's a more feature-rich and well-maintained alternative for dealing with masks and segmentation.",
-    "path": "custom_nodes/masquerade-nodes-comfyui",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:evanspearman/ComfyMath.git",
-    "commit": "c01177221c31b8e5fbc062778fc8254aeb541638",
-    "license": "Apache-2.0 license",
-    "notes": "Provides Math Nodes for ComfyUI",
-    "path": "custom_nodes/ComfyMath",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:spacepxl/ComfyUI-VAE-Utils.git",
-    "commit": "0504284791baf07862533c2dcc64f02da7ac95e8",
-    "license": "MIT License",
-    "notes": "Nodes for loading and using VAEs in ways not supported by base ComfyUI",
-    "path": "custom_nodes/ComfyUI-VAE-Utils",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast.git",
-    "commit": "4820b3f02347bddcbbb9a5a85ab7638fe976366e",
-    "license": "GPL-3.0 license",
-    "notes": "Real-Time Diffusion-Based Streaming Video Super-Resolution",
-    "path": "custom_nodes/ComfyUI-FlashVSR_Ultra_Fast",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ChangeTheConstants/SeedVarianceEnhancer.git",
-    "commit": "de5b11f04bde65a2fba4936d633398bfa4678bb7",
-    "license": "MIT License",
-    "notes": "A ComfyUI extension that enhances seed variance in generated images.",
-    "path": "custom_nodes/SeedVarianceEnhancer",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:cardenluo/easy_qwenEdit_2509.git",
-    "commit": "ce62bbae3cffde34619586a3b74c30d61951d6ce",
-    "license": "MIT License",
-    "notes": "The official size limit has been modified and size consistency processing has been carried out",
-    "path": "custom_nodes/easy_qwenEdit_2509",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/KOOK_ImageCompression.git",
-    "commit": "5db2b8f18739bd36a3736ff6cac79104e822705f",
-    "license": "MIT License",
-    "notes": "A high-quality image compression plugin for ComfyUI",
-    "path": "custom_nodes/KOOK_ImageCompression",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:idrirap/ComfyUI-Lora-Auto-Trigger-Words.git",
-    "commit": "38e89f95671e1dcdca86c9baf57ac2e1cb2f89e1",
-    "license": "",
-    "notes": "The aim of these custom nodes is to get an easy access to the trigger words (or tags) used to trigger a lora.",
-    "path": "custom_nodes/ComfyUI-Lora-Auto-Trigger-Words",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-DepthAnythingV2.git",
-    "commit": "d505cbca99803fc63327b8305618a23e59a18b42",
-    "license": "",
-    "notes": "Simple DepthAnythingV2 inference node for monocular depth estimation in ComfyUI.",
-    "path": "custom_nodes/ComfyUI-DepthAnythingV2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lanse6899/comfy_imagecrop.git",
-    "commit": "c071722d5b9b2a705b8316d9cd30702f7bbbecfb",
-    "license": "",
-    "notes": "TComfyUI 交互式图像处理节点，支持可视化剪裁、透视校正和图像拉直",
-    "path": "custom_nodes/comfy_imagecrop",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:11dogzi/Comfyui-ergouzi-DGNJD.git",
-    "commit": "b0ff18fc6376013d248dc01c91e19c11522a86be",
-    "license": "",
-    "notes": "This is a multifunctional custom node kit from Comfyui",
-    "path": "custom_nodes/Comfyui-ergouzi-DGNJD",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:JPS-GER/ComfyUI_JPS-Nodes.git",
-    "commit": "0e2a9aca02b17dde91577bfe4b65861df622dcaf",
-    "license": "",
-    "notes": "These nodes were originally made for use in JPS ComfyUI Workflows, but they can be used by anyone.",
-    "path": "custom_nodes/ComfyUI_JPS-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:huchenlei/ComfyUI_densediffusion.git",
-    "commit": "1b2e54d4da3a8a0592f6d68d81bfee8c26bc415c",
-    "license": "Apache-2.0 license",
-    "notes": "DenseDiffusion custom node for ComfyUI",
-    "path": "custom_nodes/ComfyUI_densediffusion",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:mingsky-ai/ComfyUI-MingNodes.git",
-    "commit": "afaee2c3edb40bc0d585f0597ba234dcd1041657",
-    "license": "Apache-2.0 license",
-    "notes": "some practical comfyui nodes",
-    "path": "custom_nodes/ComfyUI-MingNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:XYMikky12138/MIKKY_Nodes.git",
-    "commit": "1e71e0a766badcd69afb3f50162606a02e588d19",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/MIKKY_Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:7BEII/Comfyui_PDuse.git",
-    "commit": "29ebe30b62bc86407aee0fa0cdd044550715adb1",
-    "license": "MIT License",
-    "notes": "Handle some commonly used image json and txt files",
-    "path": "custom_nodes/Comfyui_PDuse",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:erosDiffusion/ComfyUI-EulerDiscreteScheduler.git",
-    "commit": "eb5bd4dc43ad15becb62e387fa4d07503a4a3737",
-    "license": "MIT License",
-    "notes": "sharper and noise free images",
-    "path": "custom_nodes/ComfyUI-EulerDiscreteScheduler",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-ReservedVRAM.git",
-    "commit": "058f055b80d7dc391440607fd04860adbe9b0559",
-    "license": "Apache License",
-    "notes": "A simple node that can dynamically adjust the reserved memory of a workflow in real-time",
-    "path": "custom_nodes/ComfyUI-ReservedVRAM",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:GACLove/ComfyUI-VFI.git",
-    "commit": "6176a430f12cd16003f4664c1e3c6af8e96cc3c6",
-    "license": "",
-    "notes": "Video Frame Interpolation nodes for ComfyUI using RIFE",
-    "path": "custom_nodes/ComfyUI-VFI",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/audio-separation-nodes-comfyui.git",
-    "commit": "4d16deaf5c34eb661b8145c2b7be96464f75421c",
-    "license": "MIT License",
-    "notes": "Separate stems from audio. Recombine, tempo match, slice/crop audio",
-    "path": "custom_nodes/audio-separation-nodes-comfyui",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:storyicon/comfyui_segment_anything.git",
-    "commit": "ab6395596399d5048639cdab7e44ec9fae857a93",
-    "license": "Apache License",
-    "notes": "The comfyui version of sd-webui-segment-anything.",
-    "path": "custom_nodes/comfyui_segment_anything",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:risunobushi/comfyUI_FrequencySeparation_RGB-HSV.git",
-    "commit": "67a08c55ee6aa8e9140616f01497bd54d3533fa6",
-    "license": "MIT License",
-    "notes": "A collection of simple nodes for Frequency Separation / Frequency Recombine with RGB and HSV methods",
-    "path": "custom_nodes/comfyUI_FrequencySeparation_RGB-HSV",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:edenartlab/eden_comfy_pipelines.git",
-    "commit": "48d90e2c5f4ae93de1b5d87f54b6fdc37f8e53cc",
-    "license": "",
-    "notes": "Advanced image processing, deep processing, AI text generation, logic operations, and complex video effects to enhance creative AI workflows",
-    "path": "custom_nodes/eden_comfy_pipelines",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:spacepxl/ComfyUI-Image-Filters.git",
-    "commit": "bbb3fb0045461adf3602faeedaf40af57090d4e2",
-    "license": "MIT License",
-    "notes": "Image/latent/matte manipulation in ComfyUI",
-    "path": "custom_nodes/ComfyUI-Image-Filters",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:PozzettiAndrea/ComfyUI-Sharp.git",
-    "commit": "4a182aa2a77488f8e6168226ceb4ceba5d489539",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI wrapper for SHARP by Apple - monocular 3D Gaussian Splatting in under 1 second",
-    "path": "custom_nodes/ComfyUI-Sharp",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:mav-rik/facerestore_cf.git",
-    "commit": "ff4d7a5c102441d8f058dd6135797ffb57b6c6ad",
-    "license": "",
-    "notes": "This is a copy of facerestore custom node with a bit of a change to support CodeFormer Fidelity parameter.",
-    "path": "custom_nodes/facerestore_cf",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:liusida/ComfyUI-AutoCropFaces.git",
-    "commit": "b2139db9a8ffb4707832106a58f519bbd04e6118",
-    "license": "MIT License",
-    "notes": "Use RetinaFace to detect and automatically crop faces",
-    "path": "custom_nodes/ComfyUI-AutoCropFaces",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-DiffBIR.git",
-    "commit": "3df76772a547c03e6181e2fe4ca08a6560d42c80",
-    "license": "",
-    "notes": "Comfyui-DiffBIR is a comfyui implementation of offical DiffBIR.",
-    "path": "custom_nodes/ComfyUI-DiffBIR",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:AlekPet/ComfyUI_Custom_Nodes_AlekPet.git",
-    "commit": "6310c31baf8a30e46c46ca8653f82ce7ec4bd27f",
-    "license": "MIT License",
-    "notes": "Custom nodes that extend the capabilities of ComfyUI",
-    "path": "custom_nodes/ComfyUI_Custom_Nodes_AlekPet",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:wallen0322/ComfyUI-qwenmultianglelight.git",
-    "commit": "ff08430033dc987e65e6bcae472c96b808120255",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes for Qwen-MultiAngleLight model",
-    "path": "custom_nodes/ComfyUI-qwenmultianglelight",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:TinyTerra/ComfyUI_tinyterraNodes.git",
-    "commit": "351f27264bec1af4429b6fe958975454cbb5cf46",
-    "license": "GPL-3.0 license",
-    "notes": "A selection of nodes for Stable Diffusion ComfyUI",
-    "path": "custom_nodes/ComfyUI_tinyterraNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Artificial-Sweetener/comfyui-WhiteRabbit.git",
-    "commit": "178156241b29b7cf0fb540a9688e1d9c375e8608",
-    "license": "AGPL-3.0 license",
-    "notes": "This is comfyui-WhiteRabbit, a nodepack designed to help you work with video from within ComfyUI.",
-    "path": "custom_nodes/comfyui-WhiteRabbit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:alt-key-project/comfyui-dream-video-batches.git",
-    "commit": "c4e2b4b2e37783ec59588ea92f03fff5d800670e",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes supporting video generation in batch flows (SVD & AnimateDiff)",
-    "path": "custom_nodes/comfyui-dream-video-batches",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jtydhr88/ComfyUI-qwenmultiangle.git",
-    "commit": "c264343add0423ca447a0ba8fb62e1d312f5370f",
-    "license": "",
-    "notes": "About A ComfyUI custom node for 3D camera angle control",
-    "path": "custom_nodes/ComfyUI-qwenmultiangle",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:yolain/ComfyUI-Easy-Sam3.git",
-    "commit": "88fe578a1a5e03d95281197303d5d3a73fd5a089",
-    "license": "Apache-2.0 license",
-    "notes": "A ComfyUI custom node package for SAM3 (Segment Anything Model 3)",
-    "path": "custom_nodes/ComfyUI-Easy-Sam3",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/comfy-image-saver.git",
-    "commit": "400930cb3f2041724a8e399f3112caf132a7452d",
-    "license": "MIT License",
-    "notes": "All the tools you need to save images with their generation metadata on ComfyUI",
-    "path": "custom_nodes/comfy-image-saver",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:flybirdxx/ComfyUI-Qwen-TTS.git",
-    "commit": "1d19a2ffb9302970dc0e5a43e0fec9b59f429802",
-    "license": "",
-    "notes": "ComfyUI nodes for the Qwen-TTS model",
-    "path": "custom_nodes/ComfyUI-Qwen-TTS",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Kosinkadink/ComfyUI-Advanced-ControlNet.git",
-    "commit": "2bde95a468ce5fd3959f646258606ae221fa1e17",
-    "license": "GPL-3.0 license",
-    "notes": "A set of advanced ControlNet nodes for ComfyUI",
-    "path": "custom_nodes/ComfyUI-Advanced-ControlNet",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:wallen0322/ComfyUI-Wan22FMLF.git",
-    "commit": "63ab8d89be92d0cc92a371da04d9319f096981d1",
-    "license": "",
-    "notes": "A custom node set of ComfyUI that provides multi-frame reference condition control for the Wan2.2 A14B I2V model.",
-    "path": "custom_nodes/ComfyUI-Wan22FMLF",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ssitu/ComfyUI_roop.git",
-    "commit": "d35f4aaed6568ed95691b7258fac7814d6544a02",
-    "license": "",
-    "notes": "ComfyUI nodes for the roop A1111 webui script.",
-    "path": "custom_nodes/ComfyUI_roop",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Smirnov75/ComfyUI-mxToolkit.git",
-    "commit": "7f7a0e584f12078a1c589645d866ae96bad0cc35",
-    "license": "GPL-3.0 license",
-    "notes": "A set of useful nodes for convenient use of ComfyUI",
-    "path": "custom_nodes/ComfyUI-mxToolkit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:LAOGOU-666/ComfyUI-LG_SamplingUtils.git",
-    "commit": "8a725e318201a03895f287a926d6f022902e5c31",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI nodes for LG_SamplingUtils",
-    "path": "custom_nodes/ComfyUI-LG_SamplingUtils",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:HAIGC/comfyui_haigc_toolkit.git",
-    "commit": "b295c001a924bbebbfe410a521512d5e2e847be1",
-    "license": "MIT License",
-    "notes": "ComfyUI nodes for the HAIGC Toolkit",
-    "path": "custom_nodes/comfyui_haigc_toolkit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:princepainter/Comfyui-PainterFluxImageEdit.git",
-    "commit": "58792a7cb11c368eeaed2e2e485885687d478ade",
-    "license": "",
-    "notes": "All-in-one Flux2 text-to-image & image editing node that combines CLIP encoding, VAE encoding, and reference latent injection.",
-    "path": "custom_nodes/Comfyui-PainterFluxImageEdit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI_Qwen3-VL-Instruct.git",
-    "commit": "f85d84b0ad04ae8641497c6943a748bf84bdadac",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI Qwen3-VL-Instruct 自定义节点",
-    "path": "custom_nodes/ComfyUI_Qwen3-VL-Instruct",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:logtd/ComfyUI-Fluxtapoz.git",
-    "commit": "17c71bea20e932945e9c1be0586cfd4b7e51cbf6",
-    "license": "Apache-2.0 license",
-    "notes": "Nodes for image juxtaposition for Flux in ComfyUI",
-    "path": "custom_nodes/ComfyUI-Fluxtapoz",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ryanontheinside/ComfyUI_RyanOnTheInside.git",
-    "commit": "729070645613611c9063582d723dde29c35fa5b7",
-    "license": "MIT License",
-    "notes": "Everything-Reactivity in ComfyUI",
-    "path": "custom_nodes/ComfyUI_RyanOnTheInside",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:godmt/ComfyUI-List-Utils.git",
-    "commit": "42bd59d956a2f17ecee6ccc9c317ed833fd91d85",
-    "license": "MIT License",
-    "notes": "LIST and BATCH utilities which support: create, convert, get or slice items",
-    "path": "custom_nodes/ComfyUI-List-Utils",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:princepainter/ComfyUI-PainterAI2V.git",
-    "commit": "a31ac6c8c1c1b6df96af0016edbda195ef8d2e6f",
-    "license": "",
-    "notes": "A custom node for ComfyUI that integrates PainterAI2V,",
-    "path": "custom_nodes/ComfyUI-PainterAI2V",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:hay86/ComfyUI_AceNodes.git",
-    "commit": "bb9b7bba4f06b428d921588cce7e6aff1248aa11",
-    "license": "GPL-3.0 license",
-    "notes": "Some useful custom nodes not yet included in the ComfyUI core",
-    "path": "custom_nodes/ComfyUI_AceNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:zhangp365/ComfyUI-utils-nodes.git",
-    "commit": "68093fdf11c8fa00064a46fef4c310252e26fda0",
-    "license": "GPL-3.0 license",
-    "notes": "This repo contains some useful tools, especially for improving speed.",
-    "path": "custom_nodes/ComfyUI-utils-nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:muyexiuluo/ComfyUI_Muye.git",
-    "commit": "0f123209759b2ce481a83e91cd5a2bb51cdc59a6",
-    "license": "MIT license",
-    "notes": "A fully AI-written Comfyui multi-functional aggregation plugin",
-    "path": "custom_nodes/ComfyUI_Muye",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:smthemex/ComfyUI_DiffuEraser.git",
-    "commit": "ad095ba6c1a1592410631ccb2555c7639298e17c",
-    "license": "MIT license",
-    "notes": "DiffuEraser is a diffusion model for video Inpainting",
-    "path": "custom_nodes/ComfyUI_DiffuEraser",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:princepainter/ComfyUI-PainterNodes.git",
-    "commit": "02ef5c0ec5fa0deda4c89c1bdf2400b572fbe59c",
-    "license": "",
-    "notes": "A comprehensive ComfyUI toolkit for video generation, image editing, and audio-driven lip‑sync, featuring Flux, LTXV, Wan2.2 and advanced batch workflows.",
-    "path": "custom_nodes/ComfyUI-PainterNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:paicat1/ComfyUI-PainterI2V-UP-WAN2-LatentMotion-Enhancer.git",
-    "commit": "e048f546e63265b6db0434695366274a31f210c3",
-    "license": "MIT license",
-    "notes": "A latent space motion enhancement tool specifically optimized for generating videos from WAN2.2 diagrams",
-    "path": "custom_nodes/ComfyUI-PainterI2V-UP-WAN2-LatentMotion-Enhancer",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:BlenderNeko/ComfyUI_ADV_CLIP_emb.git",
-    "commit": "63984deefb005da1ba90a1175e21d91040da38ab",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI node that let you pick the way in which prompt weights are interpreted",
-    "path": "custom_nodes/ComfyUI_ADV_CLIP_emb",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-TD-Qwen3TTS.git",
-    "commit": "b238414419f0079a70daa0c3bcf5a8e67770c64d",
-    "license": "Apache-2.0 license",
-    "notes": "Seamlessly use Qwen3-TTS models within ComfyUI.",
-    "path": "custom_nodes/ComfyUI-TD-Qwen3TTS",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-llama-cpp_vlm.git",
-    "commit": "db0138c5564a0d2b790c8781b9aea6adbd54f5ab",
-    "license": "",
-    "notes": "Run LLM/VLM models natively in ComfyUI based on llama.cpp",
-    "path": "custom_nodes/ComfyUI-llama-cpp_vlm",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:HM-RunningHub/ComfyUI_RH_FlashHead.git",
-    "commit": "111bf7d997467decd763d6168bcaa2a71941cf2b",
-    "license": "Apache-2.0 license",
-    "notes": "ComfyUI custom nodes for SoulX-FlashHead — generate real-time streaming talking head videos from a reference image and audio.",
-    "path": "custom_nodes/ComfyUI_RH_FlashHead",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Work-Fisher/ComfyUI-Novel-Director.git",
-    "commit": "50e5a9a1b64e06c96f1f5bb4d374636ce7fe7bde",
-    "license": "",
-    "notes": "ComfyUI plugin for automated storytelling",
-    "path": "custom_nodes/ComfyUI-Novel-Director",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:princepainter/ComfyUI-PainterI2V.git",
-    "commit": "652565fc032c77855a99a941f2c3a33e603a8258",
-    "license": "",
-    "notes": "An enhanced Wan2.2 Image-to-Video node specifically designed to fix the slow-motion issue in 4-step LoRAs ",
-    "path": "custom_nodes/ComfyUI-PainterI2V",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ddia56/wan22_prompt_selector.git",
-    "commit": "c57f8ebb68d056f46046c14b0f32f19185b6338a",
-    "license": "",
-    "notes": "The prompt selector was created based on the prompt word document provided by wan2.2 official.",
-    "path": "custom_nodes/wan22_prompt_selector",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:lrzjason/ComfyUI-EditUtils.git",
-    "commit": "256a2340b161da3f814e5982ca4aa999f474df93",
-    "license": "GPL-3.0 license",
-    "notes": "a set of utils for comfyui edit model",
-    "path": "custom_nodes/ComfyUI-EditUtils",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:balu112121/ComfyUI_EasySize.git",
-    "commit": "8c9f1fe677748f9d612130feef69f6969687a6e2",
-    "license": "MIT License",
-    "notes": "Both the 'Simple Image Size' and 'Simple Image Size - Latent' nodes have mask output functionality.",
-    "path": "custom_nodes/ComfyUI_EasySize",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:windFFYL/ComfyUI-3D-OpenPose-Editor2026.git",
-    "commit": "c76da3daa820672b3ecf1711d6dfb2461898c3d6",
-    "license": "",
-    "notes": "New 3D Posture Editing",
-    "path": "custom_nodes/ComfyUI-3D-OpenPose-Editor2026",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:shockz0rz/comfy-easy-grids.git",
-    "commit": "376a8adf2a86fec214816c26789849c866f25466",
-    "license": "",
-    "notes": "Custom nodes for generating image grids (and batching/looping in general) in Stable Diffusion ComfyUI.",
-    "path": "custom_nodes/comfy-easy-grids",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Derryyyyyy/ComfyUI-DNode.git",
-    "commit": "1a048ccc44da8e2482f4b67ee127f014991581ef",
-    "license": "MIT License",
-    "notes": "A ComfyUI custom node for smooth handheld camera shake simulation based on Lissajous curves.",
-    "path": "custom_nodes/ComfyUI-DNode",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:john-mnz/ComfyUI-Inspyrenet-Rembg.git",
-    "commit": "87ac452ef1182e8f35f59b04010158d74dcefd06",
-    "license": "MIT License",
-    "notes": "ComfyUI node for background removal",
-    "path": "custom_nodes/ComfyUI-Inspyrenet-Rembg",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:balu112121/ComfyUI_SynVow-Prompt.git",
-    "commit": "e794bede548b060325255d676a86b9a7e1c386f0",
-    "license": "MIT License",
-    "notes": "Upload products and it will automatically generate a prompt generator for detail page content.",
-    "path": "custom_nodes/ComfyUI_SynVow-Prompt",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-SAM3.git",
-    "commit": "e374e253a3d6de5405a84be33a269baad92e1734",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI wrapper, used to segment any content 3",
-    "path": "custom_nodes/ComfyUI-SAM3",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-ControlNeXt-SVD.git",
-    "commit": "6227d71b16602c55a159316a0f72b0b4bf281e7f",
-    "license": "",
-    "notes": "These nodes include my wrapper for the original diffusers pipeline, as well as work in progress native ComfyUI implementation.",
-    "path": "custom_nodes/ComfyUI-ControlNeXt-SVD",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-TRELLIS2.git",
-    "commit": "3ec183992fe6a8fb672a6e442341ab1d38df1452",
-    "license": "MIT License",
-    "notes": "ComfyUI custom nodes for TRELLIS.2 - Microsoft's state-of-the-art image-to-3D generation model.",
-    "path": "custom_nodes/ComfyUI-TRELLIS2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-GeometryPack.git",
-    "commit": "b0a72cdeb9bfc26375fec1a16a78f10574b0214c",
-    "license": "GNU General Public License v3.0",
-    "notes": "Professional geometry processing nodes for ComfyUI. Load, analyze, remesh, unwrap, and visualize 3D meshes directly in your workflows.",
-    "path": "custom_nodes/ComfyUI-GeometryPack",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:PozzettiAndrea/ComfyUI-Env-Manager.git",
-    "commit": "6b441f3ad45219fccddde6bcd0f11d2990ef8182",
-    "license": "",
-    "notes": "Environment visibility panel for comfy-env in ComfyUI — GPU info, precision support, node environment status",
-    "path": "custom_nodes/ComfyUI-Env-Manager",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:PozzettiAndrea/ComfyUI-Pulse-MeshAudit.git",
-    "commit": "ee6e804bc4277ff87a33e445deab717162a97da9",
-    "license": "MIT License",
-    "notes": "A ComfyUI custom node for auditing 3D mesh files by rendering them with a headless renderer and displaying an interactive carousel of renders with detailed mesh statistics.",
-    "path": "custom_nodes/ComfyUI-Pulse-MeshAudit",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:1038lab/ComfyUI-QwenVL.git",
-    "commit": "fcd1ada87a28f922cb887f779db32429f78a022c",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-    "path": "custom_nodes/ComfyUI-QwenVL",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kaibioinfo/ComfyUI_AdvancedRefluxControl.git",
-    "commit": "2b95c2c866399ca1914b4da486fe52808f7a9c60",
-    "license": "MIT License",
-    "notes": "The intensity of the Redux effect can be changed.",
-    "path": "custom_nodes/ComfyUI_AdvancedRefluxControl",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:807502278/ComfyUI-WJNodes.git",
-    "commit": "a3d271d5dabd3a181c06b09de73a43af13e77ce7",
-    "license": "",
-    "notes": "A set of comfyui multi class nodes",
-    "path": "custom_nodes/ComfyUI-WJNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:1038lab/ComfyUI-SparkTTS.git",
-    "commit": "72df232461a9f392299c7d41e44d0b11579e22b6",
-    "license": "GPL-3.0 license",
-    "notes": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-    "path": "custom_nodes/ComfyUI-SparkTTS",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:pixixai/Comfyui-PixNodes.git",
-    "commit": "cfcd7696670abd33efa041d8d58d55eb6ae60640",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/Comfyui-PixNodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ccssu/ComfyUI-Black-Image-Interceptor.git",
-    "commit": "0f0c88e20eb72c972f3282d857c02ae7f81f45a6",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-Black-Image-Interceptor",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:huixingyun/ComfyUI-SoundFlow.git",
-    "commit": "a84992bc7f615c34af4abc16d46aeb668ca68362",
-    "license": "",
-    "notes": "This is a bunch of nodes for ComfyUI to help with sound work.",
-    "path": "custom_nodes/ComfyUI-SoundFlow",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-FishAudioS2.git",
-    "commit": "3a2f63cc3706ec11b4e54d9e047030a2d71aca9d",
-    "license": "",
-    "notes": "ComfyUI custom nodes for Fish Audio S2-Pro TTS — voice clone, multi-speaker, and text-to-speech",
-    "path": "custom_nodes/ComfyUI-FishAudioS2",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:judian17/ComfyUI-SDPose-OOD.git",
-    "commit": "123653f565ca93bcda223ca8c3b03dc4930427fe",
-    "license": "MIT License",
-    "notes": "This project is a ComfyUI custom node implementation of SDPose-OOD.",
-    "path": "custom_nodes/ComfyUI-SDPose-OOD",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI-MatAnyone.git",
-    "commit": "a3dde67d8a226059d20e2698c35a5c486b49a442",
-    "license": "MIT License",
-    "notes": "MatAnyone in ComfyUI",
-    "path": "custom_nodes/ComfyUI-MatAnyone",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-SCAIL-Pose.git",
-    "commit": "11402b150d728440a4a89964faa58907f84c35e6",
-    "license": "",
-    "notes": "ComfyUI nodes for SCAIL-Pose preprocessing",
-    "path": "custom_nodes/ComfyUI-SCAIL-Pose",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:vrgamegirl19/comfyui-vrgamedevgirl.git",
-    "commit": "5822fcafca86ecbe08a85ff78947863df02b1cbb",
-    "license": "MIT License",
-    "notes": "Custom ComfyUI nodes for film grain, color matching, and video enhancement.",
-    "path": "custom_nodes/comfyui-vrgamedevgirl",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:siliconflow/ComfyUI_Fill-Nodes.git",
-    "commit": "6542d0daf8369a4d37ec14efeabf0ac70a3f6d3e",
-    "license": "",
-    "notes": "Large Node Pack for ComfyUI",
-    "path": "custom_nodes/ComfyUI_Fill-Nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:cubiq/ComfyUI_FaceAnalysis.git",
-    "commit": "8846653446a6b13582da11793faf950325a398e0",
-    "license": "Apache-2.0 license",
-    "notes": "Extension for ComfyUI to evaluate the similarity between two faces",
-    "path": "custom_nodes/ComfyUI_FaceAnalysis",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:dimtoneff/ComfyUI-PixelArt-Detector.git",
-    "commit": "63bde66633dbf3f828b67c0f25502eb2b6e848fc",
-    "license": "MIT License",
-    "notes": "生成像素图片",
-    "path": "custom_nodes/ComfyUI-PixelArt-Detector",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:LAOGOU-666/Comfyui-LG_Relight.git",
-    "commit": "0b7ffc39cafbab73927db8d41161eb6e0ff46d98",
-    "license": "",
-    "notes": "Comfyui中3D实时打光的简单实现",
-    "path": "custom_nodes/Comfyui-LG_Relight",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:goohai/Goohaitools-comfyui.git",
-    "commit": "b399cba88d6f908d4f4b71d9b5285d8c1236a01d",
-    "license": "",
-    "notes": "Over 50 practical add-ons, including batch processing for quickly loading folder images, automatic saving at specified DPI, multi-functional mask analysis, automatic correction of human faces, and automatic layout of photos, etc.",
-    "path": "custom_nodes/Goohaitools-comfyui",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Jordach/comfy-plasma.git",
-    "commit": "c63555fec40a7dddb36c99aa603e817abab3abdb",
-    "license": "MIT License",
-    "notes": "A simple plasma noise generator for ComfyUI",
-    "path": "custom_nodes/comfy-plasma",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:daxcay/ComfyUI-JDCN.git",
-    "commit": "5538f98438dfdb873a54cdf372136e30e5222ad3",
-    "license": "MIT License",
-    "notes": "ComfyUI-JDCN, Custom Utility Nodes for Artists, Designers and Animators.",
-    "path": "custom_nodes/ComfyUI-JDCN",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:ubisoft/ComfyUI-Chord.git",
-    "commit": "a192c64016c2a2c786090c5fbe21e21c0675822a",
-    "license": "Ubisoft Machine Learning License",
-    "notes": "ComfyUI Custom Node for Chord",
-    "path": "custom_nodes/ComfyUI-Chord",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:Acly/comfyui-tooling-nodes.git",
-    "commit": "7fc3df11749d9c6cbe36cc36eefb652c9ff33099",
-    "license": "GNU GENERAL PUBLIC LICENSE",
-    "notes": "Nodes for using ComfyUI as a backend for external tools. Send and receive images directly without filesystem upload/download.",
-    "path": "custom_nodes/comfyui-tooling-nodes",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:kijai/ComfyUI-PromptRelay.git",
-    "commit": "61257e6fa89684f0dc93c6cafb888742e6bce3c8",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/ComfyUI-PromptRelay",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:M1kep/Comfy_KepListStuff.git",
-    "commit": "97320545f9d40bc5c3f63c614c37fcbe88a7dc3d",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/Comfy_KepListStuff",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:jeremieLouvaert/ComfyUI-Darkroom.git",
-    "commit": "bde1ef53236d9a4ec047c124548ddb67157617e9",
-    "license": "",
-    "notes": "Professional color grading & film emulation suite for ComfyUI",
-    "path": "custom_nodes/ComfyUI-Darkroom",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  },
-  {
-    "repo": "git@github.com:WhatDreamsCost/WhatDreamsCost-ComfyUI.git",
-    "commit": "da8e020d18df43fc5c50a9f29be1a3f816420d90",
-    "license": "",
-    "notes": "",
-    "path": "custom_nodes/WhatDreamsCost-ComfyUI",
-    "updated_at": "2026-05-21T08:45:00.391906Z"
-  }
+    {
+        "repo": "git@github.com:siliconflow/BizyDraft.git",
+        "commit": "9d7bcbad2a8b6d17165a1c2ccc27ca53d4136d24",
+        "license": "MIT License",
+        "notes": "BizyDraft 核心引擎与前端",
+        "path": "BizyDraft"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI.git",
+        "commit": "8f374716ee98d378d403ebc61250e091ecd3a25c",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI 主体",
+        "path": "ComfyUI"
+    },
+    {
+        "repo": "git@github.com:siliconflow/BizyAir.git",
+        "commit": "v1.2.7",
+        "license": "MIT License",
+        "notes": "BizyAir 工作流使用的节点",
+        "path": "custom_nodes/BizyAir"
+    },
+    {
+        "repo": "git@github.com:chflame163/ComfyUI_LayerStyle.git",
+        "commit": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
+        "license": "MIT License",
+        "notes": "A set of nodes for ComfyUI that can composite layer and mask to achieve Photoshop like functionality.",
+        "path": "custom_nodes/ComfyUI_LayerStyle"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-KJNodes.git",
+        "commit": "db419cd37b237b60efef67b3cf5e074c19730386",
+        "license": "GPL-3.0 license",
+        "notes": "Various custom nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-KJNodes"
+    },
+    {
+        "repo": "git@github.com:rgthree/rgthree-comfy.git",
+        "commit": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "license": "MIT license",
+        "notes": "Making ComfyUI more comfortable!",
+        "path": "custom_nodes/rgthree-comfy"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-Custom-Scripts.git",
+        "commit": "68558e32747bc9501918c76624380e2ba1500ac7",
+        "license": "MIT license",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Custom-Scripts"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI_LayerStyle_Advance.git",
+        "commit": "1de198c4c0cd6109068476b4bdb8cdd45360a0e3",
+        "license": "MIT License",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI_LayerStyle_Advance"
+    },
+    {
+        "repo": "git@github.com:cubiq/ComfyUI_essentials.git",
+        "commit": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI_essentials"
+    },
+    {
+        "repo": "git@github.com:ltdrdata/ComfyUI-Impact-Pack.git",
+        "commit": "6a517ebe06fea2b74fc41b3bd089c0d7173eeced",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Impact-Pack"
+    },
+    {
+        "repo": "git@github.com:jakechai/ComfyUI-JakeUpgrade.git",
+        "commit": "4c1a84ad63ef6e003086469c6ae72559f3183985",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-JakeUpgrade"
+    },
+    {
+        "repo": "git@github.com:jjkramhoeft/ComfyUI-Jjk-Nodes.git",
+        "commit": "b3c99bb78a99551776b5eab1a820e1cd58f84f31",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Jjk-Nodes"
+    },
+    {
+        "repo": "git@github.com:mirabarukaso/ComfyUI_Mira.git",
+        "commit": "9cbffb14afddaff2a982cc86288ff0a7d9277ce8",
+        "license": "",
+        "notes": "A custom node for ComfyUI to improve all those custom nodes I feel not comfortable in my workflow.",
+        "path": "custom_nodes/ComfyUI_Mira"
+    },
+    {
+        "repo": "git@github.com:Suzie1/ComfyUI_Comfyroll_CustomNodes.git",
+        "commit": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "license": "",
+        "notes": "Custom nodes for SDXL and SD1.5 including Multi-ControlNet, LoRA, Aspect Ratio, Process Switches, and many more nodes",
+        "path": "custom_nodes/ComfyUI_Comfyroll_CustomNodes"
+    },
+    {
+        "repo": "git@github.com:gseth/ControlAltAI-Nodes.git",
+        "commit": "721492b66c9cede8ae23ae10615462ad80cfd061",
+        "license": "",
+        "notes": "Quality of Life ComfyUI nodes from ControlAltAI.",
+        "path": "custom_nodes/ControlAltAI-Nodes"
+    },
+    {
+        "repo": "git@github.com:yolain/ComfyUI-Easy-Use.git",
+        "commit": "e900c2ca9c0d90b0896881910ca7f3f02d88ebd8",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Easy-Use",
+        "blacklist": [
+            "easy joyCaption2API"
+        ]
+    },
+    {
+        "repo": "git@github.com:jamesWalker55/comfyui-various.git",
+        "commit": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/comfyui-various"
+    },
+    {
+        "repo": "git@github.com:lquesada/ComfyUI-Inpaint-CropAndStitch.git",
+        "commit": "b432b2411cbb7d3192d35953bd3aafea05a0e245",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Inpaint-CropAndStitch"
+    },
+    {
+        "repo": "git@github.com:melMass/comfy_mtb.git",
+        "commit": "71f601094ad03172d8f64d06df911dd9e7df4fe1",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/comfy_mtb"
+    },
+    {
+        "repo": "https://github.com/kijai/ComfyUI-IC-Light.git",
+        "commit": "22811d903af8a90100dccef1c4b579526649a6ab",
+        "license": "Apache-2.0 license",
+        "notes": "方便用户在生成图像时进行一致的光照（relighting）效果控制",
+        "path": "custom_nodes/ComfyUI-IC-Light"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-VideoHelperSuite.git",
+        "commit": "86e1037e1e3683c536a2d2ba75fe5663e5466750",
+        "license": "GPL-3.0",
+        "notes": "增强 ComfyUI 视频处理能力, 如将视频转为图像",
+        "path": "custom_nodes/ComfyUI-VideoHelperSuite"
+    },
+    {
+        "repo": "git@github.com:city96/ComfyUI-GGUF.git",
+        "commit": "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
+        "license": "Apache-2.0 license",
+        "notes": "GGUF 量化支持原生 ComfyUI 模型",
+        "path": "custom_nodes/ComfyUI-GGUF"
+    },
+    {
+        "repo": "https://github.com/chrisgoringe/cg-use-everywhere",
+        "commit": "a834f09f3889264f192711971ca624128650a250",
+        "license": "Apache-2.0 license",
+        "notes": "UE Nodes  UE 节点",
+        "path": "custom_nodes/cg-use-everywhere"
+    },
+    {
+        "repo": "https://github.com/siliconflow/ComfyAgent-auxiliary-tools.git",
+        "commit": "d149d094eb1a41a993b3cf9814bd4ec3aa57005e",
+        "license": "MIT License",
+        "notes": "在每个节点执行完毕之后都发送一个 SiliconFlow.metrics.executed 事件，返回该节点执行时间",
+        "path": "custom_nodes/ComfyAgent-auxiliary-tools"
+    },
+    {
+        "repo": "git@github.com:Kosinkadink/ComfyUI-AnimateDiff-Evolved.git",
+        "commit": "a34036b662d69d155a4536b2ac65483ae941e257",
+        "license": "Apache-2.0",
+        "notes": "Improved AnimateDiff for ComfyUI and Advanced Sampling Support",
+        "path": "custom_nodes/ComfyUI-AnimateDiff-Evolved"
+    },
+    {
+        "repo": "https://github.com/kijai/ComfyUI-SUPIR.git",
+        "commit": "c5cb1ce099c56c2bdea57e19beb5105bdaa7c429",
+        "license": "",
+        "notes": "放大节点包装",
+        "path": "custom_nodes/ComfyUI-SUPIR"
+    },
+    {
+        "repo": "https://github.com/EllangoK/ComfyUI-post-processing-nodes.git",
+        "commit": "c49a05254795403648f2c1774b6f5ea39f96e7d5",
+        "license": "GPL-3.0",
+        "notes": "为ComfyUI提供的一系列后处理节点，能够实现多种视觉上引人注目的图像效果",
+        "path": "custom_nodes/ComfyUI-post-processing-nodes"
+    },
+    {
+        "repo": "git@github.com:siliconflow/comfyui_controlnet_aux.git",
+        "commit": "a2585b65e5e6699009129003afdba904be10f765",
+        "license": "Apache-2.0",
+        "notes": "即插即用ComfyUI节点集，用于制作ControlNet提示图像",
+        "path": "custom_nodes/comfyui_controlnet_aux"
+    },
+    {
+        "repo": "https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait.git",
+        "commit": "3bba732915e22f18af0d221b9c5c282990181f1b",
+        "license": "",
+        "notes": "AdvancedLivePortrait更快，并且具有实时预览功能",
+        "path": "custom_nodes/ComfyUI-AdvancedLivePortrait"
+    },
+    {
+        "repo": "https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git",
+        "commit": "50c7b71a6a224734cc9b21963c6d1926816a97f1",
+        "license": "AGPL-3.0 license",
+        "notes": " a complement to the Impact Pack",
+        "path": "custom_nodes/ComfyUI-Impact-Subpack"
+    },
+    {
+        "repo": "https://github.com/kijai/ComfyUI-FramePackWrapper.git",
+        "commit": "a7c4b704455aee0d016143f2fc232928cc0f1d83",
+        "license": "Apache-2.0 license",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-FramePackWrapper"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-WanVideoWrapper.git",
+        "commit": "df8f3e49daaad117cf3090cc916c83f3d001494c",
+        "license": "Apache-2.0 license",
+        "notes": "KijAI 的 Wan Video 节点",
+        "path": "custom_nodes/ComfyUI-WanVideoWrapper"
+    },
+    {
+        "repo": "git@github.com:ClownsharkBatwing/RES4LYF.git",
+        "commit": "7750bf7800b6ad9d670308a09989fc0c04c40cec",
+        "license": "",
+        "notes": "社区的一个插件，里面包含自定义的 samplers 方法，群友推荐说商业级别的作品需要这个",
+        "path": "custom_nodes/RES4LYF"
+    },
+    {
+        "repo": "https://github.com/siliconflow/ComfyUI_UltimateSDUpscale.git",
+        "commit": "6dbdd1e65d140e78b9a7ba25120f104166bf2ece",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI nodes for the Ultimate Stable Diffusion Upscale script by Coyote-A.",
+        "path": "custom_nodes/ComfyUI_UltimateSDUpscale"
+    },
+    {
+        "repo": "git@github.com:jax-explorer/ComfyUI-easycontrol.git",
+        "commit": "c7ccd069b0a23823a4146b03ced2172fd5026713",
+        "license": "AGPL-3.0 license",
+        "notes": "ComfyUI EasyControl Nodes 是为 ComfyUI 提供的一组节点，允许您加载和使用 EasyControl 模型。",
+        "path": "custom_nodes/ComfyUI-easycontrol"
+    },
+    {
+        "repo": "git@github.com:TTPlanetPig/Comfyui_TTP_Toolset.git",
+        "commit": "981ae4020e7ae103b913f004e51653a3483003f4",
+        "license": "MIT License",
+        "notes": "for tile the image for advanced control or modification",
+        "path": "custom_nodes/Comfyui_TTP_Toolset"
+    },
+    {
+        "repo": "git@github.com:siliconflow/Comfyui-reactor-node.git",
+        "commit": "75eb4628105a0e3c10f0bf7ecdb1d60944d7d146",
+        "license": "GPL-3.0 license",
+        "notes": "The Fast and Simple Face Swap Extension Node for ComfyUI, based on ReActor SD-WebUI Face Swap Extension",
+        "path": "custom_nodes/Comfyui_reactor_node"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-SeedVR2_VideoUpscaler.git",
+        "commit": "4490bd1f482e026674543386bb2a4d176da245b9",
+        "license": "MIT License",
+        "notes": "Official release of SeedVR2 for ComfyUI that enables Upscale Video/Images generation.",
+        "path": "custom_nodes/ComfyUI-SeedVR2_VideoUpscaler"
+    },
+    {
+        "repo": "git@github.com:sipherxyz/comfyui-art-venture.git",
+        "commit": "6df1bc229857e10fdc66b543efa3f6a8587dcdfd",
+        "license": "MIT License",
+        "notes": "A comprehensive set of custom nodes for ComfyUI, focusing on utilities for image processing, JSON manipulation, model operations and working with object via URLs",
+        "path": "custom_nodes/ComfyUI-Art-Venture"
+    },
+    {
+        "repo": "git@github.com:SLAPaper/ComfyUI-Image-Selector.git",
+        "commit": "058846b177626a226590d355a342ae8f364591ac",
+        "license": "MIT License",
+        "notes": "ComfyUI Image Selector Node",
+        "path": "custom_nodes/ComfyUI-Image-Selector"
+    },
+    {
+        "repo": "git@github.com:11dogzi/Comfyui-HYPIR.git",
+        "commit": "5118cd619a8399290d0e10f923e3db26d29886be",
+        "license": "",
+        "notes": "这是一个用于 HYPIR（利用扩散得分先验进行图像修复） 的 ComfyUI 插件，HYPIR 是基于 Stable Diffusion 2.1 的先进图像修复模型",
+        "path": "custom_nodes/ComfyUI-HYPIR"
+    },
+    {
+        "repo": "git@github.com:Fannovel16/ComfyUI-Frame-Interpolation.git",
+        "commit": "a969c01dbccd9e5510641be04eb51fe93f6bfc3d",
+        "license": "MIT license",
+        "notes": "A custom node set for Video Frame Interpolation in ComfyUI. UPDATE Memory management is improved. Now this extension takes less RAM and VRAM than before.",
+        "path": "custom_nodes/ComfyUI-Frame-Interpolation"
+    },
+    {
+        "repo": "git@github.com:ShmuelRonen/ComfyUI-VideoUpscale_WithModel.git",
+        "commit": "1f437040cfd1582e3a04cea144aaccfbf7baf7b6",
+        "license": "MIT license",
+        "notes": "A memory-efficient implementation for upscaling videos in ComfyUI using non-diffusion upscaling models. This custom node is designed to handle large video frame sequences without memory bottlenecks.",
+        "path": "custom_nodes/ComfyUI-VideoUpscale_WithModel"
+    },
+    {
+        "repo": "git@github.com:BadCafeCode/execution-inversion-demo-comfyui.git",
+        "commit": "d9eebfaa1a6a33067e8c9108ef093b48279c4cbb",
+        "license": "",
+        "notes": "ComfyUI nodes for the execution inversion demo",
+        "path": "custom_nodes/ComfyUI-Execution-Inversion-Demo"
+    },
+    {
+        "repo": "git@github.com:SeargeDP/SeargeSDXL.git",
+        "commit": "2eb5edbc712329d77d1a2f5f1e6c5e64397a4a83",
+        "license": "MIT license",
+        "notes": "Custom nodes extension for ComfyUI, including a workflow to use SDXL 1.0 with both the base and refiner checkpoints.",
+        "path": "custom_nodes/SeargeSDXL"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-CGR-IO-Bridge.git",
+        "commit": "60ba47aeef6d5a23728a38351f4d3b9b622182ba",
+        "license": "",
+        "notes": "CGR 需要的转换接口节点",
+        "path": "custom_nodes/ComfyUI-CGR-IO-Bridge"
+    },
+    {
+        "repo": "git@github.com:nullquant/ComfyUI-BrushNet.git",
+        "commit": "505d8ef917ddf3896afd1926770ecc9b099704e2",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for the BrushNet model",
+        "path": "custom_nodes/ComfyUI-BrushNet"
+    },
+    {
+        "repo": "git@github.com:cubiq/ComfyUI_IPAdapter_plus.git",
+        "commit": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
+        "license": "GPL-3.0 license",
+        "notes": "The IPAdapter are very powerful models for image-to-image conditioning. The subject or even just the style of the reference image(s) can be easily transferred to a generation. Think of it as a 1-image lora.",
+        "path": "custom_nodes/ComfyUI_IPAdapter_plus"
+    },
+    {
+        "repo": "git@github.com:Lightricks/ComfyUI-LTXVideo.git",
+        "commit": "531512f7286963dc7aff1fd8bf5556e95eae03af",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI-LTXVideo is a collection of custom nodes for ComfyUI, designed to provide useful tools for working with the LTXV model. The model itself is supported in the core ComfyUI code. The main LTXVideo repository can be found here.",
+        "path": "custom_nodes/ComfyUI-LTXVideo"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-LivePortraitKJ.git",
+        "commit": "4d9dc6205b793ffd0fb319816136d9b8c0dbfdff",
+        "license": "MIT License",
+        "notes": "Official release of LivePortraitKJ for ComfyUI that enables Live Portrait generation.",
+        "path": "custom_nodes/ComfyUI-LivePortraitKJ"
+    },
+    {
+        "repo": "git@github.com:twri/sdxl_prompt_styler.git",
+        "commit": "51068179927f79dce14f38c6b1984390ab242be2",
+        "license": "MIT License",
+        "notes": "SDXL Prompt Styler is a node that enables you to style prompts based on predefined templates stored in multiple JSON files. The node specifically replaces a {prompt} placeholder in the 'prompt' field of each template with provided positive text.",
+        "path": "custom_nodes/ComfyUI-SDXL-Prompt-Styler"
+    },
+    {
+        "repo": "git@github.com:huchenlei/ComfyUI-layerdiffuse.git",
+        "commit": "b4f6a9e024064a4489f774a8b91049ce0b606ea3",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for the layerdiffuse model",
+        "path": "custom_nodes/ComfyUI-layerdiffuse"
+    },
+    {
+        "repo": "git@github.com:cubiq/ComfyUI_InstantID.git",
+        "commit": "72495e806bc2ab9c41581e15ccaa1bcf83c477e8",
+        "license": "Apache-2.0 license",
+        "notes": "此扩展不同于许多已可用的扩展，因为它不使用 diffusers，而是原生实现了 InstantID，并且与 ComfyUI 完全集成。",
+        "path": "custom_nodes/ComfyUI_InstantID"
+    },
+    {
+        "repo": "git@github.com:MixLabPro/comfyui-mixlab-nodes.git",
+        "commit": "32b22c39cbe13b46df29ef1b6ab088c2eb4389d2",
+        "license": "MIT license",
+        "notes": "ComfyUI nodes for the MixLab model",
+        "path": "custom_nodes/ComfyUI-MixLab"
+    },
+    {
+        "repo": "git@github.com:jags111/efficiency-nodes-comfyui.git",
+        "commit": "f0971b5553ead8f6e66bb99564431e2590cd3981",
+        "license": "GPL-3.0 license",
+        "notes": "A collection of ComfyUI custom nodes.- Awesome smart way to work with nodes!",
+        "path": "custom_nodes/ComfyUI-Efficiency-Nodes"
+    },
+    {
+        "repo": "git@github.com:pythongosssss/ComfyUI-WD14-Tagger.git",
+        "commit": "9e0a6e700299182fc05c58b62e7ad9f72182a78b",
+        "license": "MIT license",
+        "notes": "A ComfyUI extension allowing for the interrogation of booru tags from images.",
+        "path": "custom_nodes/ComfyUI-WD14-Tagger"
+    },
+    {
+        "repo": "git@github.com:chibiace/ComfyUI-Chibi-Nodes.git",
+        "commit": "424d5fc68bd3b82fe3c491f27b0c37bb3de1d123",
+        "license": "MIT license",
+        "notes": "A pack of nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-Chibi-Nodes"
+    },
+    {
+        "repo": "git@github.com:crystian/ComfyUI-Crystools.git",
+        "commit": "2af9ccf0a29c6910e6fcbdd7d2fe96f9bde44eed",
+        "license": "MIT license",
+        "notes": "A pack of nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-Crystools"
+    },
+    {
+        "repo": "git@github.com:jamesWalker55/comfyui-various.git",
+        "commit": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "license": "MIT license",
+        "notes": "This repository provides various nodes for use in ComfyUI.",
+        "path": "custom_nodes/comfyui-various"
+    },
+    {
+        "repo": "git@github.com:1038lab/ComfyUI-FireRedTTS.git",
+        "commit": "e72a987e3d2a1f768dff6fd5c5324795db3a05f7",
+        "license": "GPL-3.0 license",
+        "notes": "A ComfyUI integration for FireRedTTS‑2.",
+        "path": "custom_nodes/ComfyUI-FireRedTTS"
+    },
+    {
+        "repo": "git@github.com:yuvraj108c/ComfyUI-Whisper.git",
+        "commit": "c67c040559c013833dedb0737df14182dc5043cc",
+        "license": "CC BY-NC-SA 4.0 licenses",
+        "notes": "Transcribe audio and add subtitles to videos using Whisper in ComfyUI.",
+        "path": "custom_nodes/ComfyUI-Whisper"
+    },
+    {
+        "repo": "git@github.com:billwuhao/ComfyUI_IndexTTS.git",
+        "commit": "e88d59465f40f6bb3fce2590fad785faab1098de",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for the IndexTTS model",
+        "path": "custom_nodes/ComfyUI_IndexTTS"
+    },
+    {
+        "repo": "git@github.com:yolain/ComfyUI-Easy-IndexTTS2.git",
+        "commit": "da020b3d1ae4652ee31ffbdbb38a9323814db620",
+        "license": "bilibili Model Use License",
+        "notes": "ComfyUI nodes for the Easy-IndexTTS2 model",
+        "path": "custom_nodes/ComfyUI-Easy-IndexTTS2"
+    },
+    {
+        "repo": "git@github.com:lcolok/ComfyUI-MagicAI.git",
+        "commit": "c4a6ec6a7dfeb330cd17c938f45fd988e007fb70",
+        "license": "",
+        "notes": "group friend's cutom nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-MagicAI"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-segment-anything-2.git",
+        "commit": "4a405f958ce95eeb40f9787ea7998cf1b3cdefcd",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for the Segment Anything 2 model",
+        "path": "custom_nodes/ComfyUI-segment-anything-2"
+    },
+    {
+        "repo": "git@github.com:siliconflow/comfyui-tensorops.git",
+        "commit": "e3ef8f39a09d1f87652dc911b7d0686d85e59595",
+        "license": "MIT license",
+        "notes": "A set of tensor operation nodes for ComfyUI",
+        "path": "custom_nodes/comfyui-tensorops"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-WanAnimatePreprocess.git",
+        "commit": "1a35b81a418bbba093356ad19b19bf2a76a24f4e",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for the Wan Animate Preprocess model",
+        "path": "custom_nodes/ComfyUI-WanAnimatePreprocess"
+    },
+    {
+        "repo": "git@github.com:1038lab/ComfyUI-RMBG.git",
+        "commit": "d7402513f23f58db7d56754b02a4f51a148b4941",
+        "license": "GPL-3.0 license",
+        "notes": "A ComfyUI integration for Remove.bg background removal service.",
+        "path": "custom_nodes/ComfyUI-RMBG"
+    },
+    {
+        "repo": "git@github.com:Acly/comfyui-inpaint-nodes.git",
+        "commit": "1e2543e5619b3f6e88b7727243c8b9c5791a7b4a",
+        "license": "GPL-3.0 license",
+        "notes": "A set of inpainting nodes for ComfyUI",
+        "path": "custom_nodes/comfyui-inpaint-nodes"
+    },
+    {
+        "repo": "git@github.com:TTPlanetPig/Comfyui_Object_Detect_QWen_VL.git",
+        "commit": "e52da9b3064fe2792dc5c5e78658a3c756d5d629",
+        "license": "",
+        "notes": "ComfyUI nodes for Object Detection using Qwen-VL model",
+        "path": "custom_nodes/Comfyui_Object_Detect_QWen_VL"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-MelBandRoFormer.git",
+        "commit": "b40e263224778ec417114d91d8b3b39934e30de5",
+        "license": "",
+        "notes": "ComfyUI nodes for MelBandRoFormer model",
+        "path": "custom_nodes/ComfyUI-MelBandRoFormer"
+    },
+    {
+        "repo": "git@github.com:pamparamm/sd-perturbed-attention.git",
+        "commit": "2be8d83fa44dc0f28baf7be8122e57ed5d7165c3",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes for the Perturbed Attention model",
+        "path": "custom_nodes/sd-perturbed-attention"
+    },
+    {
+        "repo": "git@github.com:lrzjason/Comfyui-QwenEditUtils.git",
+        "commit": "098b881549abe7a88fd305b6a2e333598d9488d8",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for QwenEditUtils",
+        "path": "custom_nodes/Comfyui-QwenEditUtils"
+    },
+    {
+        "repo": "git@github.com:TTPlanetPig/Comfyui_JC2.git",
+        "commit": "69a7d6830807d65595da8848f1169a261c5dff5e",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI nodes for JoyCaption2",
+        "path": "custom_nodes/Comfyui_JC2"
+    },
+    {
+        "repo": "https://github.com/sh570655308/Comfyui-RayNodes",
+        "commit": "0dd2b9c1ae55a0925ccd5b9b862829646e8f4513",
+        "license": "MIT License",
+        "notes": "A collection of custom nodes for ComfyUI that provide various functionalities such as image processing, model management, and workflow enhancements.",
+        "path": "custom_nodes/Comfyui-RayNodes"
+    },
+    {
+        "repo": "git@github.com:WASasquatch/was-node-suite-comfyui.git",
+        "commit": "ea935d1044ae5a26efa54ebeb18fe9020af49a45",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/was-node-suite-comfyui"
+    },
+    {
+        "repo": "git@github.com:fssorc/ComfyUI_FaceShaper.git",
+        "commit": "308ed8fc92db8b30da59c58b48a5e01da013d021",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI nodes for the FaceShaper model",
+        "path": "custom_nodes/ComfyUI_FaceShaper"
+    },
+    {
+        "repo": "git@github.com:MeeeyoAI/ComfyUI_StringOps.git",
+        "commit": "d683188ef829c14be8f1a05385345583bd82ee50",
+        "license": "",
+        "notes": "A set of string operation nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-StringOps"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-GIMM-VFI.git",
+        "commit": "4c9a3123762af85e7c796e41737da0b70c75d72d",
+        "license": "S-Lab License 1.0",
+        "notes": "ComfyUI nodes for the GIMM VFI model",
+        "path": "custom_nodes/ComfyUI-GIMM-VFI"
+    },
+    {
+        "repo": "git@github.com:whmc76/ComfyUI-UniversalToolkit.git",
+        "commit": "ca49258023d2c8dfbc67c03ccfff69739d55e55f",
+        "license": "MIT License",
+        "notes": "A collection of utility nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-UniversalToolkit"
+    },
+    {
+        "repo": "git@github.com:theUpsider/ComfyUI-Logic.git",
+        "commit": "214cfba933291be224156d37bc30c25742076b44",
+        "license": "",
+        "notes": "A set of logic operation nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-Logic"
+    },
+    {
+        "repo": "git@github.com:scraed/LanPaint.git",
+        "commit": "2c8f4baec0290d488ff873979b0f3d789216fc6d",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI nodes for the LanPaint model",
+        "path": "custom_nodes/LanPaint"
+    },
+    {
+        "repo": "git@github.com:LAOGOU-666/Comfyui_LG_Tools.git",
+        "commit": "4c429f4a07ee12d664415cbcff0ea6e491101db8",
+        "license": "MIT License",
+        "notes": "A collection of useful tools for ComfyUI",
+        "path": "custom_nodes/Comfyui_LG_Tools"
+    },
+    {
+        "repo": "git@github.com:siliconflow/Comfyui-SecNodes.git",
+        "commit": "ed1923a6dab91487c277d8e2a0602fba87ff416b",
+        "license": "Apache-2.0 license",
+        "notes": "A set of security-related nodes for ComfyUI",
+        "path": "custom_nodes/Comfyui-SecNodes"
+    },
+    {
+        "repo": "git@github.com:M1kep/ComfyLiterals.git",
+        "commit": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
+        "license": "",
+        "notes": "A set of literal value nodes for ComfyUI",
+        "path": "custom_nodes/ComfyLiterals"
+    },
+    {
+        "repo": "git@github.com:Derfuu/Derfuu_ComfyUI_ModdedNodes.git",
+        "commit": "d0905bed31249f2bd0814c67585cf4fe3c77c015",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/Derfuu_ComfyUI_ModdedNodes"
+    },
+    {
+        "repo": "git@github.com:yuvraj108c/ComfyUI_InvSR.git",
+        "commit": "98e52dd07d500c91d57b5cf8b7e9994790cb6f1b",
+        "license": "S-Lab License 1.0",
+        "notes": "This project is a ComfyUI wrapper for InvSR (Arbitrary-steps Image Super-resolution via Diffusion Inversion)",
+        "path": "custom_nodes/ComfyUI_InvSR"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-TeaCache.git",
+        "commit": "aaa34d818ca4ce55b282ffd3578043b7924037bc",
+        "license": "Apache-2.0 license",
+        "notes": "This project is a ComfyUI extension for TeaCache (Efficient workflow caching system for ComfyUI)",
+        "path": "custom_nodes/ComfyUI-TeaCache"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-Florence2.git",
+        "commit": "00b63382966a444a9fefacb65b8deb188d12a458",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes for the Florence2 model",
+        "path": "custom_nodes/ComfyUI-Florence2"
+    },
+    {
+        "repo": "git@github.com:Jonseed/ComfyUI-Detail-Daemon.git",
+        "commit": "f391accbda2d309cdcbec65cb9fcc80a41197b20",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes for the Detail Daemon model",
+        "path": "custom_nodes/ComfyUI-Detail-Daemon"
+    },
+    {
+        "repo": "git@github.com:gameltb/Comfyui-StableSR.git",
+        "commit": "fb6010436f6eb21037ab12dbcbf078a9d4021187",
+        "license": "",
+        "notes": "ComfyUI nodes for StableSR model",
+        "path": "custom_nodes/Comfyui-StableSR"
+    },
+    {
+        "repo": "git@github.com:BadCafeCode/masquerade-nodes-comfyui.git",
+        "commit": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "license": "MIT License",
+        "notes": "It's a more feature-rich and well-maintained alternative for dealing with masks and segmentation.",
+        "path": "custom_nodes/masquerade-nodes-comfyui"
+    },
+    {
+        "repo": "git@github.com:evanspearman/ComfyMath.git",
+        "commit": "c01177221c31b8e5fbc062778fc8254aeb541638",
+        "license": "Apache-2.0 license",
+        "notes": "Provides Math Nodes for ComfyUI",
+        "path": "custom_nodes/ComfyMath"
+    },
+    {
+        "repo": "git@github.com:spacepxl/ComfyUI-VAE-Utils.git",
+        "commit": "0504284791baf07862533c2dcc64f02da7ac95e8",
+        "license": "MIT License",
+        "notes": "Nodes for loading and using VAEs in ways not supported by base ComfyUI",
+        "path": "custom_nodes/ComfyUI-VAE-Utils"
+    },
+    {
+        "repo": "git@github.com:lihaoyun6/ComfyUI-FlashVSR_Ultra_Fast.git",
+        "commit": "4820b3f02347bddcbbb9a5a85ab7638fe976366e",
+        "license": "GPL-3.0 license",
+        "notes": "Real-Time Diffusion-Based Streaming Video Super-Resolution",
+        "path": "custom_nodes/ComfyUI-FlashVSR_Ultra_Fast"
+    },
+    {
+        "repo": "git@github.com:ChangeTheConstants/SeedVarianceEnhancer.git",
+        "commit": "de5b11f04bde65a2fba4936d633398bfa4678bb7",
+        "license": "MIT License",
+        "notes": "A ComfyUI extension that enhances seed variance in generated images.",
+        "path": "custom_nodes/SeedVarianceEnhancer"
+    },
+    {
+        "repo": "git@github.com:cardenluo/easy_qwenEdit_2509.git",
+        "commit": "ce62bbae3cffde34619586a3b74c30d61951d6ce",
+        "license": "MIT License",
+        "notes": "The official size limit has been modified and size consistency processing has been carried out",
+        "path": "custom_nodes/easy_qwenEdit_2509"
+    },
+    {
+        "repo": "git@github.com:siliconflow/KOOK_ImageCompression.git",
+        "commit": "5db2b8f18739bd36a3736ff6cac79104e822705f",
+        "license": "MIT License",
+        "notes": "A high-quality image compression plugin for ComfyUI",
+        "path": "custom_nodes/KOOK_ImageCompression"
+    },
+    {
+        "repo": "git@github.com:idrirap/ComfyUI-Lora-Auto-Trigger-Words.git",
+        "commit": "38e89f95671e1dcdca86c9baf57ac2e1cb2f89e1",
+        "license": "",
+        "notes": "The aim of these custom nodes is to get an easy access to the trigger words (or tags) used to trigger a lora.",
+        "path": "custom_nodes/ComfyUI-Lora-Auto-Trigger-Words"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-DepthAnythingV2.git",
+        "commit": "d505cbca99803fc63327b8305618a23e59a18b42",
+        "license": "",
+        "notes": "Simple DepthAnythingV2 inference node for monocular depth estimation in ComfyUI.",
+        "path": "custom_nodes/ComfyUI-DepthAnythingV2"
+    },
+    {
+        "repo": "git@github.com:lanse6899/comfy_imagecrop.git",
+        "commit": "c071722d5b9b2a705b8316d9cd30702f7bbbecfb",
+        "license": "",
+        "notes": "TComfyUI 交互式图像处理节点，支持可视化剪裁、透视校正和图像拉直",
+        "path": "custom_nodes/comfy_imagecrop"
+    },
+    {
+        "repo": "git@github.com:11dogzi/Comfyui-ergouzi-DGNJD.git",
+        "commit": "b0ff18fc6376013d248dc01c91e19c11522a86be",
+        "license": "",
+        "notes": "This is a multifunctional custom node kit from Comfyui",
+        "path": "custom_nodes/Comfyui-ergouzi-DGNJD"
+    },
+    {
+        "repo": "git@github.com:JPS-GER/ComfyUI_JPS-Nodes.git",
+        "commit": "0e2a9aca02b17dde91577bfe4b65861df622dcaf",
+        "license": "",
+        "notes": "These nodes were originally made for use in JPS ComfyUI Workflows, but they can be used by anyone.",
+        "path": "custom_nodes/ComfyUI_JPS-Nodes"
+    },
+    {
+        "repo": "git@github.com:huchenlei/ComfyUI_densediffusion.git",
+        "commit": "1b2e54d4da3a8a0592f6d68d81bfee8c26bc415c",
+        "license": "Apache-2.0 license",
+        "notes": "DenseDiffusion custom node for ComfyUI",
+        "path": "custom_nodes/ComfyUI_densediffusion"
+    },
+    {
+        "repo": "git@github.com:mingsky-ai/ComfyUI-MingNodes.git",
+        "commit": "afaee2c3edb40bc0d585f0597ba234dcd1041657",
+        "license": "Apache-2.0 license",
+        "notes": "some practical comfyui nodes",
+        "path": "custom_nodes/ComfyUI-MingNodes"
+    },
+    {
+        "repo": "git@github.com:XYMikky12138/MIKKY_Nodes.git",
+        "commit": "1e71e0a766badcd69afb3f50162606a02e588d19",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/MIKKY_Nodes"
+    },
+    {
+        "repo": "git@github.com:7BEII/Comfyui_PDuse.git",
+        "commit": "29ebe30b62bc86407aee0fa0cdd044550715adb1",
+        "license": "MIT License",
+        "notes": "Handle some commonly used image json and txt files",
+        "path": "custom_nodes/Comfyui_PDuse"
+    },
+    {
+        "repo": "git@github.com:erosDiffusion/ComfyUI-EulerDiscreteScheduler.git",
+        "commit": "eb5bd4dc43ad15becb62e387fa4d07503a4a3737",
+        "license": "MIT License",
+        "notes": "sharper and noise free images",
+        "path": "custom_nodes/ComfyUI-EulerDiscreteScheduler"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-ReservedVRAM.git",
+        "commit": "058f055b80d7dc391440607fd04860adbe9b0559",
+        "license": "Apache License",
+        "notes": "A simple node that can dynamically adjust the reserved memory of a workflow in real-time",
+        "path": "custom_nodes/ComfyUI-ReservedVRAM"
+    },
+    {
+        "repo": "git@github.com:GACLove/ComfyUI-VFI.git",
+        "commit": "6176a430f12cd16003f4664c1e3c6af8e96cc3c6",
+        "license": "",
+        "notes": "Video Frame Interpolation nodes for ComfyUI using RIFE",
+        "path": "custom_nodes/ComfyUI-VFI"
+    },
+    {
+        "repo": "git@github.com:siliconflow/audio-separation-nodes-comfyui.git",
+        "commit": "4d16deaf5c34eb661b8145c2b7be96464f75421c",
+        "license": "MIT License",
+        "notes": "Separate stems from audio. Recombine, tempo match, slice/crop audio",
+        "path": "custom_nodes/audio-separation-nodes-comfyui"
+    },
+    {
+        "repo": "git@github.com:storyicon/comfyui_segment_anything.git",
+        "commit": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "license": "Apache License",
+        "notes": "The comfyui version of sd-webui-segment-anything.",
+        "path": "custom_nodes/comfyui_segment_anything"
+    },
+    {
+        "repo": "git@github.com:risunobushi/comfyUI_FrequencySeparation_RGB-HSV.git",
+        "commit": "67a08c55ee6aa8e9140616f01497bd54d3533fa6",
+        "license": "MIT License",
+        "notes": "A collection of simple nodes for Frequency Separation / Frequency Recombine with RGB and HSV methods",
+        "path": "custom_nodes/comfyUI_FrequencySeparation_RGB-HSV"
+    },
+    {
+        "repo": "git@github.com:edenartlab/eden_comfy_pipelines.git",
+        "commit": "48d90e2c5f4ae93de1b5d87f54b6fdc37f8e53cc",
+        "license": "",
+        "notes": "Advanced image processing, deep processing, AI text generation, logic operations, and complex video effects to enhance creative AI workflows",
+        "path": "custom_nodes/eden_comfy_pipelines"
+    },
+    {
+        "repo": "git@github.com:spacepxl/ComfyUI-Image-Filters.git",
+        "commit": "bbb3fb0045461adf3602faeedaf40af57090d4e2",
+        "license": "MIT License",
+        "notes": "Image/latent/matte manipulation in ComfyUI",
+        "path": "custom_nodes/ComfyUI-Image-Filters"
+    },
+    {
+        "repo": "git@github.com:PozzettiAndrea/ComfyUI-Sharp.git",
+        "commit": "4a182aa2a77488f8e6168226ceb4ceba5d489539",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI wrapper for SHARP by Apple - monocular 3D Gaussian Splatting in under 1 second",
+        "path": "custom_nodes/ComfyUI-Sharp"
+    },
+    {
+        "repo": "git@github.com:mav-rik/facerestore_cf.git",
+        "commit": "ff4d7a5c102441d8f058dd6135797ffb57b6c6ad",
+        "license": "",
+        "notes": "This is a copy of facerestore custom node with a bit of a change to support CodeFormer Fidelity parameter.",
+        "path": "custom_nodes/facerestore_cf"
+    },
+    {
+        "repo": "git@github.com:liusida/ComfyUI-AutoCropFaces.git",
+        "commit": "b2139db9a8ffb4707832106a58f519bbd04e6118",
+        "license": "MIT License",
+        "notes": "Use RetinaFace to detect and automatically crop faces",
+        "path": "custom_nodes/ComfyUI-AutoCropFaces"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-DiffBIR.git",
+        "commit": "3df76772a547c03e6181e2fe4ca08a6560d42c80",
+        "license": "",
+        "notes": "Comfyui-DiffBIR is a comfyui implementation of offical DiffBIR.",
+        "path": "custom_nodes/ComfyUI-DiffBIR"
+    },
+    {
+        "repo": "git@github.com:AlekPet/ComfyUI_Custom_Nodes_AlekPet.git",
+        "commit": "6310c31baf8a30e46c46ca8653f82ce7ec4bd27f",
+        "license": "MIT License",
+        "notes": "Custom nodes that extend the capabilities of ComfyUI",
+        "path": "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
+    },
+    {
+        "repo": "git@github.com:wallen0322/ComfyUI-qwenmultianglelight.git",
+        "commit": "ff08430033dc987e65e6bcae472c96b808120255",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes for Qwen-MultiAngleLight model",
+        "path": "custom_nodes/ComfyUI-qwenmultianglelight"
+    },
+    {
+        "repo": "git@github.com:TinyTerra/ComfyUI_tinyterraNodes.git",
+        "commit": "351f27264bec1af4429b6fe958975454cbb5cf46",
+        "license": "GPL-3.0 license",
+        "notes": "A selection of nodes for Stable Diffusion ComfyUI",
+        "path": "custom_nodes/ComfyUI_tinyterraNodes"
+    },
+    {
+        "repo": "git@github.com:Artificial-Sweetener/comfyui-WhiteRabbit.git",
+        "commit": "178156241b29b7cf0fb540a9688e1d9c375e8608",
+        "license": "AGPL-3.0 license",
+        "notes": "This is comfyui-WhiteRabbit, a nodepack designed to help you work with video from within ComfyUI.",
+        "path": "custom_nodes/comfyui-WhiteRabbit"
+    },
+    {
+        "repo": "git@github.com:alt-key-project/comfyui-dream-video-batches.git",
+        "commit": "c4e2b4b2e37783ec59588ea92f03fff5d800670e",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes supporting video generation in batch flows (SVD & AnimateDiff)",
+        "path": "custom_nodes/comfyui-dream-video-batches"
+    },
+    {
+        "repo": "git@github.com:jtydhr88/ComfyUI-qwenmultiangle.git",
+        "commit": "c264343add0423ca447a0ba8fb62e1d312f5370f",
+        "license": "",
+        "notes": "About A ComfyUI custom node for 3D camera angle control",
+        "path": "custom_nodes/ComfyUI-qwenmultiangle"
+    },
+    {
+        "repo": "git@github.com:yolain/ComfyUI-Easy-Sam3.git",
+        "commit": "88fe578a1a5e03d95281197303d5d3a73fd5a089",
+        "license": "Apache-2.0 license",
+        "notes": "A ComfyUI custom node package for SAM3 (Segment Anything Model 3)",
+        "path": "custom_nodes/ComfyUI-Easy-Sam3"
+    },
+    {
+        "repo": "git@github.com:siliconflow/comfy-image-saver.git",
+        "commit": "400930cb3f2041724a8e399f3112caf132a7452d",
+        "license": "MIT License",
+        "notes": "All the tools you need to save images with their generation metadata on ComfyUI",
+        "path": "custom_nodes/comfy-image-saver"
+    },
+    {
+        "repo": "git@github.com:flybirdxx/ComfyUI-Qwen-TTS.git",
+        "commit": "1d19a2ffb9302970dc0e5a43e0fec9b59f429802",
+        "license": "",
+        "notes": "ComfyUI nodes for the Qwen-TTS model",
+        "path": "custom_nodes/ComfyUI-Qwen-TTS"
+    },
+    {
+        "repo": "git@github.com:Kosinkadink/ComfyUI-Advanced-ControlNet.git",
+        "commit": "2bde95a468ce5fd3959f646258606ae221fa1e17",
+        "license": "GPL-3.0 license",
+        "notes": "A set of advanced ControlNet nodes for ComfyUI",
+        "path": "custom_nodes/ComfyUI-Advanced-ControlNet"
+    },
+    {
+        "repo": "git@github.com:wallen0322/ComfyUI-Wan22FMLF.git",
+        "commit": "63ab8d89be92d0cc92a371da04d9319f096981d1",
+        "license": "",
+        "notes": "A custom node set of ComfyUI that provides multi-frame reference condition control for the Wan2.2 A14B I2V model.",
+        "path": "custom_nodes/ComfyUI-Wan22FMLF"
+    },
+    {
+        "repo": "git@github.com:ssitu/ComfyUI_roop.git",
+        "commit": "d35f4aaed6568ed95691b7258fac7814d6544a02",
+        "license": "",
+        "notes": "ComfyUI nodes for the roop A1111 webui script.",
+        "path": "custom_nodes/ComfyUI_roop"
+    },
+    {
+        "repo": "git@github.com:Smirnov75/ComfyUI-mxToolkit.git",
+        "commit": "7f7a0e584f12078a1c589645d866ae96bad0cc35",
+        "license": "GPL-3.0 license",
+        "notes": "A set of useful nodes for convenient use of ComfyUI",
+        "path": "custom_nodes/ComfyUI-mxToolkit"
+    },
+    {
+        "repo": "git@github.com:LAOGOU-666/ComfyUI-LG_SamplingUtils.git",
+        "commit": "8a725e318201a03895f287a926d6f022902e5c31",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI nodes for LG_SamplingUtils",
+        "path": "custom_nodes/ComfyUI-LG_SamplingUtils"
+    },
+    {
+        "repo": "git@github.com:HAIGC/comfyui_haigc_toolkit.git",
+        "commit": "b295c001a924bbebbfe410a521512d5e2e847be1",
+        "license": "MIT License",
+        "notes": "ComfyUI nodes for the HAIGC Toolkit",
+        "path": "custom_nodes/comfyui_haigc_toolkit"
+    },
+    {
+        "repo": "git@github.com:princepainter/Comfyui-PainterFluxImageEdit.git",
+        "commit": "58792a7cb11c368eeaed2e2e485885687d478ade",
+        "license": "",
+        "notes": "All-in-one Flux2 text-to-image & image editing node that combines CLIP encoding, VAE encoding, and reference latent injection.",
+        "path": "custom_nodes/Comfyui-PainterFluxImageEdit"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI_Qwen3-VL-Instruct.git",
+        "commit": "f85d84b0ad04ae8641497c6943a748bf84bdadac",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI Qwen3-VL-Instruct 自定义节点",
+        "path": "custom_nodes/ComfyUI_Qwen3-VL-Instruct"
+    },
+    {
+        "repo": "git@github.com:logtd/ComfyUI-Fluxtapoz.git",
+        "commit": "17c71bea20e932945e9c1be0586cfd4b7e51cbf6",
+        "license": "Apache-2.0 license",
+        "notes": "Nodes for image juxtaposition for Flux in ComfyUI",
+        "path": "custom_nodes/ComfyUI-Fluxtapoz"
+    },
+    {
+        "repo": "git@github.com:ryanontheinside/ComfyUI_RyanOnTheInside.git",
+        "commit": "729070645613611c9063582d723dde29c35fa5b7",
+        "license": "MIT License",
+        "notes": "Everything-Reactivity in ComfyUI",
+        "path": "custom_nodes/ComfyUI_RyanOnTheInside"
+    },
+    {
+        "repo": "git@github.com:godmt/ComfyUI-List-Utils.git",
+        "commit": "42bd59d956a2f17ecee6ccc9c317ed833fd91d85",
+        "license": "MIT License",
+        "notes": "LIST and BATCH utilities which support: create, convert, get or slice items",
+        "path": "custom_nodes/ComfyUI-List-Utils"
+    },
+    {
+        "repo": "git@github.com:princepainter/ComfyUI-PainterAI2V.git",
+        "commit": "a31ac6c8c1c1b6df96af0016edbda195ef8d2e6f",
+        "license": "",
+        "notes": "A custom node for ComfyUI that integrates PainterAI2V,",
+        "path": "custom_nodes/ComfyUI-PainterAI2V"
+    },
+    {
+        "repo": "git@github.com:hay86/ComfyUI_AceNodes.git",
+        "commit": "bb9b7bba4f06b428d921588cce7e6aff1248aa11",
+        "license": "GPL-3.0 license",
+        "notes": "Some useful custom nodes not yet included in the ComfyUI core",
+        "path": "custom_nodes/ComfyUI_AceNodes"
+    },
+    {
+        "repo": "git@github.com:zhangp365/ComfyUI-utils-nodes.git",
+        "commit": "68093fdf11c8fa00064a46fef4c310252e26fda0",
+        "license": "GPL-3.0 license",
+        "notes": "This repo contains some useful tools, especially for improving speed.",
+        "path": "custom_nodes/ComfyUI-utils-nodes"
+    },
+    {
+        "repo": "git@github.com:muyexiuluo/ComfyUI_Muye.git",
+        "commit": "0f123209759b2ce481a83e91cd5a2bb51cdc59a6",
+        "license": "MIT license",
+        "notes": "A fully AI-written Comfyui multi-functional aggregation plugin",
+        "path": "custom_nodes/ComfyUI_Muye"
+    },
+    {
+        "repo": "git@github.com:smthemex/ComfyUI_DiffuEraser.git",
+        "commit": "ad095ba6c1a1592410631ccb2555c7639298e17c",
+        "license": "MIT license",
+        "notes": "DiffuEraser is a diffusion model for video Inpainting",
+        "path": "custom_nodes/ComfyUI_DiffuEraser"
+    },
+    {
+        "repo": "git@github.com:princepainter/ComfyUI-PainterNodes.git",
+        "commit": "02ef5c0ec5fa0deda4c89c1bdf2400b572fbe59c",
+        "license": "",
+        "notes": "A comprehensive ComfyUI toolkit for video generation, image editing, and audio-driven lip‑sync, featuring Flux, LTXV, Wan2.2 and advanced batch workflows.",
+        "path": "custom_nodes/ComfyUI-PainterNodes"
+    },
+    {
+        "repo": "git@github.com:paicat1/ComfyUI-PainterI2V-UP-WAN2-LatentMotion-Enhancer.git",
+        "commit": "e048f546e63265b6db0434695366274a31f210c3",
+        "license": "MIT license",
+        "notes": "A latent space motion enhancement tool specifically optimized for generating videos from WAN2.2 diagrams",
+        "path": "custom_nodes/ComfyUI-PainterI2V-UP-WAN2-LatentMotion-Enhancer"
+    },
+    {
+        "repo": "git@github.com:BlenderNeko/ComfyUI_ADV_CLIP_emb.git",
+        "commit": "63984deefb005da1ba90a1175e21d91040da38ab",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI node that let you pick the way in which prompt weights are interpreted",
+        "path": "custom_nodes/ComfyUI_ADV_CLIP_emb"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-TD-Qwen3TTS.git",
+        "commit": "b238414419f0079a70daa0c3bcf5a8e67770c64d",
+        "license": "Apache-2.0 license",
+        "notes": "Seamlessly use Qwen3-TTS models within ComfyUI.",
+        "path": "custom_nodes/ComfyUI-TD-Qwen3TTS"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-llama-cpp_vlm.git",
+        "commit": "db0138c5564a0d2b790c8781b9aea6adbd54f5ab",
+        "license": "",
+        "notes": "Run LLM/VLM models natively in ComfyUI based on llama.cpp",
+        "path": "custom_nodes/ComfyUI-llama-cpp_vlm"
+    },
+    {
+        "repo": "git@github.com:HM-RunningHub/ComfyUI_RH_FlashHead.git",
+        "commit": "111bf7d997467decd763d6168bcaa2a71941cf2b",
+        "license": "Apache-2.0 license",
+        "notes": "ComfyUI custom nodes for SoulX-FlashHead — generate real-time streaming talking head videos from a reference image and audio.",
+        "path": "custom_nodes/ComfyUI_RH_FlashHead"
+    },
+    {
+        "repo": "git@github.com:Work-Fisher/ComfyUI-Novel-Director.git",
+        "commit": "50e5a9a1b64e06c96f1f5bb4d374636ce7fe7bde",
+        "license": "",
+        "notes": "ComfyUI plugin for automated storytelling",
+        "path": "custom_nodes/ComfyUI-Novel-Director"
+    },
+    {
+        "repo": "git@github.com:princepainter/ComfyUI-PainterI2V.git",
+        "commit": "652565fc032c77855a99a941f2c3a33e603a8258",
+        "license": "",
+        "notes": "An enhanced Wan2.2 Image-to-Video node specifically designed to fix the slow-motion issue in 4-step LoRAs ",
+        "path": "custom_nodes/ComfyUI-PainterI2V"
+    },
+    {
+        "repo": "git@github.com:ddia56/wan22_prompt_selector.git",
+        "commit": "c57f8ebb68d056f46046c14b0f32f19185b6338a",
+        "license": "",
+        "notes": "The prompt selector was created based on the prompt word document provided by wan2.2 official.",
+        "path": "custom_nodes/wan22_prompt_selector"
+    },
+    {
+        "repo": "git@github.com:lrzjason/ComfyUI-EditUtils.git",
+        "commit": "256a2340b161da3f814e5982ca4aa999f474df93",
+        "license": "GPL-3.0 license",
+        "notes": "a set of utils for comfyui edit model",
+        "path": "custom_nodes/ComfyUI-EditUtils"
+    },
+    {
+        "repo": "git@github.com:balu112121/ComfyUI_EasySize.git",
+        "commit": "8c9f1fe677748f9d612130feef69f6969687a6e2",
+        "license": "MIT License",
+        "notes": "Both the 'Simple Image Size' and 'Simple Image Size - Latent' nodes have mask output functionality.",
+        "path": "custom_nodes/ComfyUI_EasySize"
+    },
+    {
+        "repo": "git@github.com:windFFYL/ComfyUI-3D-OpenPose-Editor2026.git",
+        "commit": "c76da3daa820672b3ecf1711d6dfb2461898c3d6",
+        "license": "",
+        "notes": "New 3D Posture Editing",
+        "path": "custom_nodes/ComfyUI-3D-OpenPose-Editor2026"
+    },
+    {
+        "repo": "git@github.com:shockz0rz/comfy-easy-grids.git",
+        "commit": "376a8adf2a86fec214816c26789849c866f25466",
+        "license": "",
+        "notes": "Custom nodes for generating image grids (and batching/looping in general) in Stable Diffusion ComfyUI.",
+        "path": "custom_nodes/comfy-easy-grids"
+    },
+    {
+        "repo": "git@github.com:Derryyyyyy/ComfyUI-DNode.git",
+        "commit": "1a048ccc44da8e2482f4b67ee127f014991581ef",
+        "license": "MIT License",
+        "notes": "A ComfyUI custom node for smooth handheld camera shake simulation based on Lissajous curves.",
+        "path": "custom_nodes/ComfyUI-DNode"
+    },
+    {
+        "repo": "git@github.com:john-mnz/ComfyUI-Inspyrenet-Rembg.git",
+        "commit": "87ac452ef1182e8f35f59b04010158d74dcefd06",
+        "license": "MIT License",
+        "notes": "ComfyUI node for background removal",
+        "path": "custom_nodes/ComfyUI-Inspyrenet-Rembg"
+    },
+    {
+        "repo": "git@github.com:balu112121/ComfyUI_SynVow-Prompt.git",
+        "commit": "e794bede548b060325255d676a86b9a7e1c386f0",
+        "license": "MIT License",
+        "notes": "Upload products and it will automatically generate a prompt generator for detail page content.",
+        "path": "custom_nodes/ComfyUI_SynVow-Prompt"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-SAM3.git",
+        "commit": "e374e253a3d6de5405a84be33a269baad92e1734",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI wrapper, used to segment any content 3",
+        "path": "custom_nodes/ComfyUI-SAM3"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-ControlNeXt-SVD.git",
+        "commit": "6227d71b16602c55a159316a0f72b0b4bf281e7f",
+        "license": "",
+        "notes": "These nodes include my wrapper for the original diffusers pipeline, as well as work in progress native ComfyUI implementation.",
+        "path": "custom_nodes/ComfyUI-ControlNeXt-SVD"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-TRELLIS2.git",
+        "commit": "3ec183992fe6a8fb672a6e442341ab1d38df1452",
+        "license": "MIT License",
+        "notes": "ComfyUI custom nodes for TRELLIS.2 - Microsoft's state-of-the-art image-to-3D generation model.",
+        "path": "custom_nodes/ComfyUI-TRELLIS2"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-GeometryPack.git",
+        "commit": "b0a72cdeb9bfc26375fec1a16a78f10574b0214c",
+        "license": "GNU General Public License v3.0",
+        "notes": "Professional geometry processing nodes for ComfyUI. Load, analyze, remesh, unwrap, and visualize 3D meshes directly in your workflows.",
+        "path": "custom_nodes/ComfyUI-GeometryPack"
+    },
+    {
+        "repo": "git@github.com:PozzettiAndrea/ComfyUI-Env-Manager.git",
+        "commit": "6b441f3ad45219fccddde6bcd0f11d2990ef8182",
+        "license": "",
+        "notes": "Environment visibility panel for comfy-env in ComfyUI — GPU info, precision support, node environment status",
+        "path": "custom_nodes/ComfyUI-Env-Manager"
+    },
+    {
+        "repo": "git@github.com:PozzettiAndrea/ComfyUI-Pulse-MeshAudit.git",
+        "commit": "ee6e804bc4277ff87a33e445deab717162a97da9",
+        "license": "MIT License",
+        "notes": "A ComfyUI custom node for auditing 3D mesh files by rendering them with a headless renderer and displaying an interactive carousel of renders with detailed mesh statistics.",
+        "path": "custom_nodes/ComfyUI-Pulse-MeshAudit"
+    },
+    {
+        "repo": "git@github.com:1038lab/ComfyUI-QwenVL.git",
+        "commit": "fcd1ada87a28f922cb887f779db32429f78a022c",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
+        "path": "custom_nodes/ComfyUI-QwenVL"
+    },
+    {
+        "repo": "git@github.com:kaibioinfo/ComfyUI_AdvancedRefluxControl.git",
+        "commit": "2b95c2c866399ca1914b4da486fe52808f7a9c60",
+        "license": "MIT License",
+        "notes": "The intensity of the Redux effect can be changed.",
+        "path": "custom_nodes/ComfyUI_AdvancedRefluxControl"
+    },
+    {
+        "repo": "git@github.com:807502278/ComfyUI-WJNodes.git",
+        "commit": "a3d271d5dabd3a181c06b09de73a43af13e77ce7",
+        "license": "",
+        "notes": "A set of comfyui multi class nodes",
+        "path": "custom_nodes/ComfyUI-WJNodes"
+    },
+    {
+        "repo": "git@github.com:1038lab/ComfyUI-SparkTTS.git",
+        "commit": "72df232461a9f392299c7d41e44d0b11579e22b6",
+        "license": "GPL-3.0 license",
+        "notes": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
+        "path": "custom_nodes/ComfyUI-SparkTTS"
+    },
+    {
+        "repo": "git@github.com:pixixai/Comfyui-PixNodes.git",
+        "commit": "cfcd7696670abd33efa041d8d58d55eb6ae60640",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/Comfyui-PixNodes"
+    },
+    {
+        "repo": "git@github.com:ccssu/ComfyUI-Black-Image-Interceptor.git",
+        "commit": "0f0c88e20eb72c972f3282d857c02ae7f81f45a6",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-Black-Image-Interceptor"
+    },
+    {
+        "repo": "git@github.com:huixingyun/ComfyUI-SoundFlow.git",
+        "commit": "a84992bc7f615c34af4abc16d46aeb668ca68362",
+        "license": "",
+        "notes": "This is a bunch of nodes for ComfyUI to help with sound work.",
+        "path": "custom_nodes/ComfyUI-SoundFlow"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-FishAudioS2.git",
+        "commit": "3a2f63cc3706ec11b4e54d9e047030a2d71aca9d",
+        "license": "",
+        "notes": "ComfyUI custom nodes for Fish Audio S2-Pro TTS — voice clone, multi-speaker, and text-to-speech",
+        "path": "custom_nodes/ComfyUI-FishAudioS2"
+    },
+    {
+        "repo": "git@github.com:judian17/ComfyUI-SDPose-OOD.git",
+        "commit": "123653f565ca93bcda223ca8c3b03dc4930427fe",
+        "license": "MIT License",
+        "notes": "This project is a ComfyUI custom node implementation of SDPose-OOD.",
+        "path": "custom_nodes/ComfyUI-SDPose-OOD"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI-MatAnyone.git",
+        "commit": "a3dde67d8a226059d20e2698c35a5c486b49a442",
+        "license": "MIT License",
+        "notes": "MatAnyone in ComfyUI",
+        "path": "custom_nodes/ComfyUI-MatAnyone"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-SCAIL-Pose.git",
+        "commit": "11402b150d728440a4a89964faa58907f84c35e6",
+        "license": "",
+        "notes": "ComfyUI nodes for SCAIL-Pose preprocessing",
+        "path": "custom_nodes/ComfyUI-SCAIL-Pose"
+    },
+    {
+        "repo": "git@github.com:vrgamegirl19/comfyui-vrgamedevgirl.git",
+        "commit": "5822fcafca86ecbe08a85ff78947863df02b1cbb",
+        "license": "MIT License",
+        "notes": "Custom ComfyUI nodes for film grain, color matching, and video enhancement.",
+        "path": "custom_nodes/comfyui-vrgamedevgirl"
+    },
+    {
+        "repo": "git@github.com:siliconflow/ComfyUI_Fill-Nodes.git",
+        "commit": "6542d0daf8369a4d37ec14efeabf0ac70a3f6d3e",
+        "license": "",
+        "notes": "Large Node Pack for ComfyUI",
+        "path": "custom_nodes/ComfyUI_Fill-Nodes"
+    },
+    {
+        "repo": "git@github.com:cubiq/ComfyUI_FaceAnalysis.git",
+        "commit": "8846653446a6b13582da11793faf950325a398e0",
+        "license": "Apache-2.0 license",
+        "notes": "Extension for ComfyUI to evaluate the similarity between two faces",
+        "path": "custom_nodes/ComfyUI_FaceAnalysis"
+    },
+    {
+        "repo": "git@github.com:dimtoneff/ComfyUI-PixelArt-Detector.git",
+        "commit": "63bde66633dbf3f828b67c0f25502eb2b6e848fc",
+        "license": "MIT License",
+        "notes": "生成像素图片",
+        "path": "custom_nodes/ComfyUI-PixelArt-Detector"
+    },
+    {
+        "repo": "git@github.com:LAOGOU-666/Comfyui-LG_Relight.git",
+        "commit": "0b7ffc39cafbab73927db8d41161eb6e0ff46d98",
+        "license": "",
+        "notes": "Comfyui中3D实时打光的简单实现",
+        "path": "custom_nodes/Comfyui-LG_Relight"
+    },
+    {
+        "repo": "git@github.com:goohai/Goohaitools-comfyui.git",
+        "commit": "b399cba88d6f908d4f4b71d9b5285d8c1236a01d",
+        "license": "",
+        "notes": "Over 50 practical add-ons, including batch processing for quickly loading folder images, automatic saving at specified DPI, multi-functional mask analysis, automatic correction of human faces, and automatic layout of photos, etc.",
+        "path": "custom_nodes/Goohaitools-comfyui"
+    },
+    {
+        "repo": "git@github.com:Jordach/comfy-plasma.git",
+        "commit": "c63555fec40a7dddb36c99aa603e817abab3abdb",
+        "license": "MIT License",
+        "notes": "A simple plasma noise generator for ComfyUI",
+        "path": "custom_nodes/comfy-plasma"
+    },
+    {
+        "repo": "git@github.com:daxcay/ComfyUI-JDCN.git",
+        "commit": "5538f98438dfdb873a54cdf372136e30e5222ad3",
+        "license": "MIT License",
+        "notes": "ComfyUI-JDCN, Custom Utility Nodes for Artists, Designers and Animators.",
+        "path": "custom_nodes/ComfyUI-JDCN"
+    },
+    {
+        "repo": "git@github.com:ubisoft/ComfyUI-Chord.git",
+        "commit": "a192c64016c2a2c786090c5fbe21e21c0675822a",
+        "license": "Ubisoft Machine Learning License",
+        "notes": "ComfyUI Custom Node for Chord",
+        "path": "custom_nodes/ComfyUI-Chord"
+    },
+    {
+        "repo": "git@github.com:Acly/comfyui-tooling-nodes.git",
+        "commit": "7fc3df11749d9c6cbe36cc36eefb652c9ff33099",
+        "license": "GNU GENERAL PUBLIC LICENSE",
+        "notes": "Nodes for using ComfyUI as a backend for external tools. Send and receive images directly without filesystem upload/download.",
+        "path": "custom_nodes/comfyui-tooling-nodes"
+    },
+    {
+        "repo": "git@github.com:kijai/ComfyUI-PromptRelay.git",
+        "commit": "61257e6fa89684f0dc93c6cafb888742e6bce3c8",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/ComfyUI-PromptRelay"
+    },
+    {
+        "repo": "git@github.com:M1kep/Comfy_KepListStuff.git",
+        "commit": "97320545f9d40bc5c3f63c614c37fcbe88a7dc3d",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/Comfy_KepListStuff"
+    },
+    {
+        "repo": "git@github.com:jeremieLouvaert/ComfyUI-Darkroom.git",
+        "commit": "bde1ef53236d9a4ec047c124548ddb67157617e9",
+        "license": "",
+        "notes": "Professional color grading & film emulation suite for ComfyUI",
+        "path": "custom_nodes/ComfyUI-Darkroom"
+    },
+    {
+        "repo": "git@github.com:WhatDreamsCost/WhatDreamsCost-ComfyUI.git",
+        "commit": "da8e020d18df43fc5c50a9f29be1a3f816420d90",
+        "license": "",
+        "notes": "",
+        "path": "custom_nodes/WhatDreamsCost-ComfyUI"
+    }
 ]

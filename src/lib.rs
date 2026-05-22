@@ -18,13 +18,24 @@ use tempfile;
     author = "desonglll",
     about = "A cli for sync setup.json of bizyair cce dockerfile."
 )]
+#[command(group(
+    clap::ArgGroup::new("action")
+        .required(true)
+        .multiple(false)
+))]
 pub struct CliArgs {
+    /// Sync the setup.json between two files.
+    #[arg(long, default_value_t = false, group = "action")]
+    pub sync: bool,
+    /// Clone the repos from setup.json provided by source.
+    #[arg(long, default_value_t = false, group = "action")]
+    pub clone: bool,
     /// Source file path with json format.
-    #[arg(short, long)]
+    #[arg(short, long, required = true)]
     pub source: PathBuf,
     /// Target file path with json format.
     #[arg(short, long)]
-    pub target: PathBuf,
+    pub target: Option<PathBuf>,
     /// New target file saved path with json format.
     #[arg(short, long)]
     pub output: Option<PathBuf>,
@@ -42,8 +53,10 @@ pub struct CliArgs {
 impl Default for CliArgs {
     fn default() -> Self {
         Self {
+            sync: true,
+            clone: false,
             source: PathBuf::from("source.json"),
-            target: PathBuf::from("target.json"),
+            target: Some(PathBuf::from("target.json")),
             output: Some(PathBuf::from("target.json")),
             append: false,
             ignore: None,

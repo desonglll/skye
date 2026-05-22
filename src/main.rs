@@ -1,8 +1,8 @@
 use clap::Parser;
 use colored::*;
 use env_logger::{self};
-use log::info;
-use skye::{CliArgs, read_repos_from_file, safe_write_to_file, sync_commits};
+use log::{error, info};
+use skye::{read_repos_from_file, safe_write_to_file, sync_commits, CliArgs};
 use std::process::exit;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -14,37 +14,48 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut args = CliArgs::parse();
 
-    if args.output.is_none() {
-        args.output = Some(args.target.clone());
-    };
+    if args.sync == true {
+        if let Some(ref target) = args.target {
+            if args.output.is_none() {
+                args.output = Some(target.clone());
+            };
 
-    info!("source_path: {:?}", args.source);
-    info!("target_path: {:?}", args.target);
-    info!("new_target_path: {:?}", args.output);
+            info!("source_path: {:?}", args.source);
+            info!("target_path: {:?}", &target);
+            info!("new_target_path: {:?}", args.output);
 
-    let source_repos = read_repos_from_file(&args.source)
-        .expect(&format!("failed to read from file {:?}", &args.source));
+            let source_repos = read_repos_from_file(&args.source)
+                .expect(&format!("failed to read from file {:?}", &args.source));
 
-    let target_repos = read_repos_from_file(&args.target).unwrap_or_else(|_| {
-        info!("not found valid file, create a new file: {:?}", args.target);
-        Vec::new()
-    });
+            let target_repos = read_repos_from_file(&target).unwrap_or_else(|_| {
+                info!("not found valid file, create a new file: {:?}", target);
+                Vec::new()
+            });
 
-    info!(
-        "start sync {:?} -> {:?} to {:?}",
-        args.source, args.target, args.output
-    );
-    let updated_target = sync_commits(source_repos, target_repos, &args);
-    info!("safely write back...");
-    match args.output.clone() {
-        None => {
-            eprintln!("not a valid output path: None");
+            info!(
+                "start sync {:?} -> {:?} to {:?}",
+                args.source, target, args.output
+            );
+            let updated_target = sync_commits(source_repos, target_repos, &args);
+            info!("safely write back...");
+            match args.output.clone() {
+                None => {
+                    eprintln!("not a valid output path: None");
+                    exit(1);
+                }
+                Some(output) => {
+                    safe_write_to_file(output, &updated_target, &args)?;
+                }
+            }
+            info!("{}", String::from("success!").green());
+        } else {
+            error!("{}", "target not provided!");
             exit(1);
         }
-        Some(output) => {
-            safe_write_to_file(output, &updated_target, &args)?;
-        }
+    } 
+
+    if args.clone == true {
+        unimplemented!()
     }
-    info!("{}", String::from("success!").green());
     Ok(())
 }

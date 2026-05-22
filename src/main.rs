@@ -1,13 +1,13 @@
-use std::process::exit;
 use clap::Parser;
 use colored::*;
 use env_logger::{self};
-use log::info;
+use log::{debug, info};
 use skye::{CliArgs, read_repos_from_file, safe_write_to_file, sync_commits};
+use std::process::exit;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     unsafe {
-        std::env::set_var("RUST_LOG", "info");
+        std::env::set_var("RUST_LOG", "debug");
     }
 
     env_logger::init();
@@ -24,6 +24,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let source_repos = read_repos_from_file(&args.source)
         .expect(&format!("failed to read from file {:?}", &args.source));
+
+    for s in &source_repos{
+        if s.path == "custom_nodes/ComfyUI-Easy-Use" {
+            debug!("source_repo {:?}", s);
+        }
+    }
 
     let target_repos = read_repos_from_file(&args.target).unwrap_or_else(|_| {
         info!("not found valid file, create a new file: {:?}", args.target);

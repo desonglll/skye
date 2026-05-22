@@ -47,7 +47,7 @@ impl Default for CliArgs {
             output: Some(PathBuf::from("target.json")),
             append: false,
             ignore: None,
-            with_update_at: false
+            with_update_at: false,
         }
     }
 }
@@ -71,9 +71,12 @@ pub struct RepoInfo {
     commit: String,
     license: Option<String>,
     notes: Option<String>,
-    path: String,
+    pub path: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     updated_at: Option<DateTime<FixedOffset>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(rename = "blacklist")]
+    pub black_list: Option<Vec<String>>,
 }
 
 pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs) -> Vec<RepoInfo> {
@@ -159,6 +162,21 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs
                 target_item.updated_at = Some(current_time);
             }
 
+            // sync black_list.
+            if source_item.black_list.is_some() && target_item.black_list != source_item.black_list
+            {
+                if let Some(black_list) = source_item.black_list {
+                    debug!(
+                        "black_list: \t {:?} -> {:?}",
+                        &target_item.black_list.as_ref().unwrap(),
+                        black_list
+                    );
+                    target_item.black_list = Some(black_list);
+                    is_updated = true;
+                }
+                target_item.updated_at = Some(current_time);
+            }
+
             // check if updated_at exists.
             if target_item.updated_at.is_none() {
                 target_item.updated_at = Some(current_time);
@@ -235,7 +253,7 @@ pub fn read_repos_from_file<P: AsRef<Path>>(
 pub fn safe_write_to_file<P: AsRef<Path>>(
     path: P,
     data: &Vec<RepoInfo>,
-    args: &CliArgs
+    args: &CliArgs,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let data = if !args.with_update_at {
         info!("{}", "clean update_at field".yellow());
@@ -277,6 +295,8 @@ mod tests {
             notes: notes.map(|s| s.to_string()),
             path: path.to_string(),
             updated_at: None,
+
+            black_list: None,
         }
     }
 
@@ -305,6 +325,8 @@ mod tests {
             notes: None,
             path: "repo-a".to_string(),
             updated_at: None,
+
+            black_list: None,
         }];
         let target = vec![create_mock_repo("repo-a", "commit-old", None, None)];
         let args = CliArgs::default();

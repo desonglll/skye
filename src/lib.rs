@@ -35,7 +35,7 @@ pub struct CliArgs {
     #[arg(short, long, num_args = 1..)]
     pub ignore: Option<Vec<String>>,
     /// With(or add) update_at field.
-    #[arg(short, long, default_value_t = false)]
+    #[arg(long, default_value_t = false)]
     pub with_update_at: bool,
 }
 

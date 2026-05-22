@@ -1,7 +1,7 @@
 use clap::Parser;
 use colored::*;
 use env_logger::{self};
-use log::{debug, info};
+use log::info;
 use skye::{CliArgs, read_repos_from_file, safe_write_to_file, sync_commits};
 use std::process::exit;
 

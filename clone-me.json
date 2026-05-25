@@ -1,0 +1,9 @@
+[
+    {
+        "repo": "git@github.com:desonglll/.config.git",
+        "commit": "10402e3e67413a655a34267147b2a60f7db72385",
+        "license": "MIT License",
+        "notes": "My configuration",
+        "path": ".config"
+    }
+]

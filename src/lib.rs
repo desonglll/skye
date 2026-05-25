@@ -1,5 +1,5 @@
 use chrono::{DateTime, FixedOffset, Utc};
-use clap::Parser;
+use clap::{Parser, Subcommand};
 use colored::*;
 use git2::build::RepoBuilder;
 use git2::{FetchOptions, Repository};
@@ -7,6 +7,7 @@ use indexmap::IndexMap;
 use log::{debug, info};
 use serde::{Deserialize, Serialize};
 use std::fs;
+use std::ops::Deref;
 use std::path::PathBuf;
 use std::{
     fs::File,
@@ -17,53 +18,76 @@ use tempfile;
 
 #[derive(Parser, Debug)]
 #[command(
+    name = "skye",
     version = "0.0.1",
     author = "desonglll",
     about = "A cli for sync setup.json of bizyair cce dockerfile."
 )]
-#[command(group(
-    clap::ArgGroup::new("action")
-        .required(true)
-        .multiple(false)
-))]
-pub struct CliArgs {
-    /// Sync the setup.json between two files.
-    #[arg(long, default_value_t = false, group = "action")]
-    pub sync: bool,
-    /// Clone the repos from setup.json provided by source.
-    #[arg(long, default_value_t = false, group = "action")]
-    pub clone: bool,
-    /// Source file path with json format.
-    #[arg(short, long, required = true)]
-    pub source: PathBuf,
-    /// Target file path with json format.
-    #[arg(short, long)]
-    pub target: Option<PathBuf>,
-    /// New target file saved path with json format.
-    #[arg(short, long)]
-    pub output: Option<PathBuf>,
-    /// Whether to append missing object from source to target.
-    #[arg(short, long)]
-    pub append: bool,
-    /// Objects you want to ignore, which is identified by `path`.
-    #[arg(short, long, num_args = 1..)]
-    pub ignore: Option<Vec<String>>,
-    /// With(or add) update_at field.
-    #[arg(long, default_value_t = false)]
-    pub with_update_at: bool,
+pub struct Cli {
+    #[command(subcommand)]
+    pub command: Commands,
 }
 
-impl Default for CliArgs {
+#[derive(Subcommand, Debug)]
+pub enum Commands {
+    /// Sync the setup.json between two files.
+    Sync {
+        /// Source file path with json format.
+        #[arg(short, long)]
+        source: PathBuf,
+
+        /// Target file path with json format.
+        #[arg(short, long)]
+        target: PathBuf,
+
+        /// New target file saved path with json format.
+        #[arg(short, long)]
+        output: Option<PathBuf>,
+
+        /// Whether to append missing object from source to target.
+        #[arg(short, long, default_value_t = false)]
+        append: bool,
+
+        /// Objects you want to ignore, identified by `path`.
+        #[arg(short, long, num_args = 1..)]
+        ignore: Option<Vec<String>>,
+
+        /// Add update_at field.
+        #[arg(long, default_value_t = false)]
+        with_update_at: bool,
+    },
+
+    /// Clone repos from setup.json.
+    Clone {
+        /// Source file path with json format.
+        #[arg(short, long)]
+        source: PathBuf,
+
+        /// Clone destination directory.
+        #[arg(long)]
+        clone_dir: PathBuf,
+
+        /// Use shallow clone.
+        #[arg(long, default_value_t = true)]
+        shallow: bool,
+
+        /// Objects you want to ignore, identified by `path`.
+        #[arg(short, long, num_args = 1..)]
+        ignore: Option<Vec<String>>,
+    },
+}
+
+impl Default for Cli {
     fn default() -> Self {
         Self {
-            sync: true,
-            clone: false,
-            source: PathBuf::from("source.json"),
-            target: Some(PathBuf::from("target.json")),
-            output: Some(PathBuf::from("target.json")),
-            append: false,
-            ignore: None,
-            with_update_at: false,
+            command: Commands::Sync {
+                source: PathBuf::from("source.json"),
+                target: PathBuf::from("target.json"),
+                output: Some(PathBuf::from("target.json")),
+                append: false,
+                ignore: None,
+                with_update_at: false,
+            },
         }
     }
 }
@@ -98,12 +122,15 @@ pub struct RepoInfo {
     black_list: Option<Vec<String>>,
 }
 
-pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs) -> Vec<RepoInfo> {
+pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &Cli) -> Vec<RepoInfo> {
     let mut target_map: IndexMap<String, RepoInfo> = target
         .into_iter()
         .map(|item| (item.path.clone(), item))
         .collect();
-    let ignore_list = args.ignore.clone().unwrap_or(vec![]);
+    let ignore_list = match &args.command {
+        Commands::Sync { ignore, .. } => ignore.clone().unwrap_or_default(),
+        Commands::Clone { ignore, .. } => ignore.clone().unwrap_or_default(),
+    };
     let shanghai_tz = FixedOffset::east_opt(8 * 3600).unwrap();
     let current_time: DateTime<FixedOffset> = Utc::now().with_timezone(&shanghai_tz);
     for source_item in source {
@@ -211,49 +238,66 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs
                 info!("updated: \t {}", source_item.path.blue())
             }
         } else {
-            if args.append {
-                info!(
-                    "new repo:\t {}, add {}",
-                    source_item.path.green(),
-                    source_item.repo.blue()
-                );
-                debug!("adding: \t {}", source_item.repo.blue());
-                debug!("adding: \t {}", source_item.commit.blue());
-                debug!(
-                    "adding: \t {}",
-                    source_item
-                        .license
-                        .as_deref()
-                        .filter(|s| !s.is_empty())
-                        .unwrap_or("None")
-                        .blue()
-                );
-                debug!(
-                    "adding: \t {}",
-                    source_item
-                        .notes
-                        .as_deref()
-                        .filter(|s| !s.is_empty())
-                        .unwrap_or("None")
-                        .blue()
-                );
-                debug!(
-                    "adding: \t {}",
-                    source_item
-                        .updated_at
-                        .unwrap_or(current_time)
-                        .to_string()
-                        .blue()
-                );
-                let mut new_item = source_item;
-                new_item.updated_at = Some(current_time);
-                target_map.insert(new_item.path.clone(), new_item);
-            } else {
-                info!(
-                    "skip repo:\t {}: {}",
-                    source_item.path.magenta(),
-                    source_item.repo
-                )
+            match &args.command {
+                Commands::Sync {
+                    source,
+                    target,
+                    output,
+                    append,
+                    ignore,
+                    with_update_at,
+                } => {
+                    if *append {
+                        info!(
+                            "new repo:\t {}, add {}",
+                            source_item.path.green(),
+                            source_item.repo.blue()
+                        );
+                        debug!("adding: \t {}", source_item.repo.blue());
+                        debug!("adding: \t {}", source_item.commit.blue());
+                        debug!(
+                            "adding: \t {}",
+                            source_item
+                                .license
+                                .as_deref()
+                                .filter(|s| !s.is_empty())
+                                .unwrap_or("None")
+                                .blue()
+                        );
+                        debug!(
+                            "adding: \t {}",
+                            source_item
+                                .notes
+                                .as_deref()
+                                .filter(|s| !s.is_empty())
+                                .unwrap_or("None")
+                                .blue()
+                        );
+                        debug!(
+                            "adding: \t {}",
+                            source_item
+                                .updated_at
+                                .unwrap_or(current_time)
+                                .to_string()
+                                .blue()
+                        );
+                        let mut new_item = source_item;
+                        new_item.updated_at = Some(current_time);
+                        target_map.insert(new_item.path.clone(), new_item);
+                    } else {
+                        info!(
+                            "skip repo:\t {}: {}",
+                            source_item.path.magenta(),
+                            source_item.repo
+                        )
+                    }
+                }
+                Commands::Clone {
+                    source,
+                    clone_dir,
+                    shallow,
+                    ignore,
+                } => todo!(),
             }
         }
     }
@@ -296,18 +340,36 @@ pub fn read_repos_from_file<P: AsRef<Path>>(
 pub fn safe_write_to_file<P: AsRef<Path>>(
     path: P,
     data: &Vec<RepoInfo>,
-    args: &CliArgs,
+    args: &Cli,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let data = if !args.with_update_at {
-        info!("{}", "clean update_at field".yellow());
-        let mut cloned_data = data.clone();
-        cloned_data.iter_mut().for_each(|x| {
-            x.updated_at = None;
-        });
-        cloned_data
-    } else {
-        data.clone()
-    };
+    match &args.command {
+        Commands::Sync {
+            source,
+            target,
+            output,
+            append,
+            ignore,
+            with_update_at,
+        } => {
+            let data = if !with_update_at {
+                info!("{}", "clean update_at field".yellow());
+                let mut cloned_data = data.clone();
+                cloned_data.iter_mut().for_each(|x| {
+                    x.updated_at = None;
+                });
+                cloned_data
+            } else {
+                data.clone()
+            };
+        }
+        Commands::Clone {
+            source,
+            clone_dir,
+            shallow,
+            ignore,
+        } => todo!(),
+    }
+
     let path = path.as_ref();
     let dir = path.parent().unwrap_or(Path::new("."));
     let temp_file = tempfile::NamedTempFile::new_in(dir)?;

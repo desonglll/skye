@@ -1,9 +1,12 @@
 use chrono::{DateTime, FixedOffset, Utc};
 use clap::Parser;
 use colored::*;
+use git2::build::RepoBuilder;
+use git2::{FetchOptions, Repository};
 use indexmap::IndexMap;
 use log::{debug, info};
 use serde::{Deserialize, Serialize};
+use std::fs;
 use std::path::PathBuf;
 use std::{
     fs::File,
@@ -83,11 +86,11 @@ impl Default for CliArgs {
 ///
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct RepoInfo {
-    repo: String,
-    commit: String,
+    pub repo: String,
+    pub commit: String,
     license: Option<String>,
     notes: Option<String>,
-    path: String,
+    pub path: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     updated_at: Option<DateTime<FixedOffset>>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -255,6 +258,30 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &CliArgs
         }
     }
     target_map.into_values().collect()
+}
+
+/// Clone the repository.
+pub fn clone_repository(url: &str, dst: &Path) -> anyhow::Result<()> {
+    if dst.exists() {
+        anyhow::bail!("target already exists: {}", dst.display());
+    }
+    if let Some(parent) = dst.parent() {
+        fs::create_dir_all(parent)?;
+    }
+    Repository::clone(url, dst)?;
+    Ok(())
+}
+
+pub fn shallow_clone(url: &str, dst: &Path) -> anyhow::Result<()> {
+    let mut fo = FetchOptions::new();
+    fo.depth(1);
+
+    let mut builder = RepoBuilder::new();
+    builder.fetch_options(fo);
+
+    builder.clone(url, dst)?;
+
+    Ok(())
 }
 
 pub fn read_repos_from_file<P: AsRef<Path>>(

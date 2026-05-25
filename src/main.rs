@@ -2,7 +2,7 @@ use clap::Parser;
 use colored::*;
 use env_logger::{self};
 use log::{error, info};
-use skye::{read_repos_from_file, safe_write_to_file, sync_commits, CliArgs};
+use skye::{CliArgs, read_repos_from_file, safe_write_to_file, sync_commits};
 use std::process::exit;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -52,9 +52,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             error!("{}", "target not provided!");
             exit(1);
         }
-    } 
+    }
 
     if args.clone == true {
+        info!("clone projects");
+        let source_repos = read_repos_from_file(&args.source)
+            .expect(&format!("failed to read from file {:?}", &args.source));
+
+        for repo in source_repos {
+            println!("repo: {repo:?}");
+        }
         unimplemented!()
     }
     Ok(())

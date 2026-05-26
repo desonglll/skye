@@ -2,8 +2,12 @@ use clap::Parser;
 use colored::*;
 use env_logger::{self};
 use log::{error, info};
-use skye::{Cli, read_repos_from_file, safe_write_to_file, sync_commits};
-use std::process::exit;
+
+use skye::{
+    Cli, build_ssh_builder, read_repos_from_file, safe_write_to_file, ssh_clone_repository,
+    sync_commits,
+};
+use std::{path::Path, process::exit};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     unsafe {
@@ -61,8 +65,29 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             let source_repos = read_repos_from_file(&source)
                 .expect(&format!("failed to read from file {:?}", &source));
 
-            for repo in source_repos {
-                println!("repo: {:?}", repo.repo);
+            let ssh_builder = build_ssh_builder();
+
+            match ssh_builder {
+                Ok(mut builder) => {
+                    for mut repo in source_repos {
+                        println!("repo: {:?}", repo.repo);
+
+                        if repo.repo.starts_with("git@github.com") {
+                            repo.repo = repo.repo.replace(":", "/");
+                            repo.repo = format!("ssh://{}", repo.repo);
+                        }
+
+                        let specific_path = clone_dir.as_path().join(Path::new(&repo.repo));
+
+                        match ssh_clone_repository(&mut builder, &repo.repo, &specific_path) {
+                            Ok(_) => continue,
+                            Err(e) => {
+                                error!("error to clone {}: {}", repo.repo, e);
+                            }
+                        }
+                    }
+                }
+                Err(_) => todo!(),
             }
             unimplemented!()
         }

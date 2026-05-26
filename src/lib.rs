@@ -2,13 +2,12 @@ use chrono::{DateTime, FixedOffset, Utc};
 use clap::{Parser, Subcommand};
 use colored::*;
 use git2::build::RepoBuilder;
-use git2::{FetchOptions, Repository};
+use git2::{Cred, FetchOptions, RemoteCallbacks};
 use indexmap::IndexMap;
 use log::{debug, info};
 use serde::{Deserialize, Serialize};
-use std::fs;
-use std::ops::Deref;
 use std::path::PathBuf;
+use std::{env, fs};
 use std::{
     fs::File,
     io::{BufReader, BufWriter, Write},
@@ -240,12 +239,12 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &Cli) ->
         } else {
             match &args.command {
                 Commands::Sync {
-                    source,
-                    target,
-                    output,
+                    source: _,
+                    target: _,
+                    output: _,
                     append,
-                    ignore,
-                    with_update_at,
+                    ignore: _,
+                    with_update_at: _,
                 } => {
                     if *append {
                         info!(
@@ -293,10 +292,10 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &Cli) ->
                     }
                 }
                 Commands::Clone {
-                    source,
-                    clone_dir,
-                    shallow,
-                    ignore,
+                    source: _,
+                    clone_dir: _,
+                    shallow: _,
+                    ignore: _,
                 } => todo!(),
             }
         }
@@ -304,15 +303,38 @@ pub fn sync_commits(source: Vec<RepoInfo>, target: Vec<RepoInfo>, args: &Cli) ->
     target_map.into_values().collect()
 }
 
-/// Clone the repository.
-pub fn clone_repository(url: &str, dst: &Path) -> anyhow::Result<()> {
+pub fn build_ssh_builder<'a>() -> anyhow::Result<RepoBuilder<'a>> {
+    let mut callbacks = RemoteCallbacks::new();
+    callbacks.credentials(|_url, username_from_url, _allowed_types| {
+        Cred::ssh_key(
+            username_from_url.unwrap(),
+            None,
+            Path::new(&format!("{}/.ssh/id_rsa", env::var("HOME").unwrap())),
+            None,
+        )
+    });
+
+    let mut fo = git2::FetchOptions::new();
+    fo.remote_callbacks(callbacks);
+
+    let mut builder = git2::build::RepoBuilder::new();
+    builder.fetch_options(fo);
+    Ok(builder)
+}
+
+/// Clone the repository with ssh.
+pub fn ssh_clone_repository(
+    builder: &mut RepoBuilder,
+    url: &str,
+    dst: &Path,
+) -> anyhow::Result<()> {
     if dst.exists() {
         anyhow::bail!("target already exists: {}", dst.display());
     }
     if let Some(parent) = dst.parent() {
         fs::create_dir_all(parent)?;
     }
-    Repository::clone(url, dst)?;
+    builder.clone(url, dst)?;
     Ok(())
 }
 
@@ -344,14 +366,14 @@ pub fn safe_write_to_file<P: AsRef<Path>>(
 ) -> Result<(), Box<dyn std::error::Error>> {
     match &args.command {
         Commands::Sync {
-            source,
-            target,
-            output,
-            append,
-            ignore,
+            source: _,
+            target: _,
+            output: _,
+            append: _,
+            ignore: _,
             with_update_at,
         } => {
-            let data = if !with_update_at {
+            let _data = if !with_update_at {
                 info!("{}", "clean update_at field".yellow());
                 let mut cloned_data = data.clone();
                 cloned_data.iter_mut().for_each(|x| {
@@ -363,10 +385,10 @@ pub fn safe_write_to_file<P: AsRef<Path>>(
             };
         }
         Commands::Clone {
-            source,
-            clone_dir,
-            shallow,
-            ignore,
+            source: _,
+            clone_dir: _,
+            shallow: _,
+            ignore: _,
         } => todo!(),
     }
 
@@ -409,9 +431,9 @@ mod tests {
     fn test_sync_new_repo_added() {
         let source = vec![create_mock_repo("repo-a", "commit-1", Some("MIT"), None)];
         let target = vec![];
-        let args = CliArgs {
+        let args = Cli {
             append: true,
-            ..CliArgs::default()
+            ..Cli::default()
         };
 
         let result = sync_commits(source, target, &args);
@@ -435,7 +457,7 @@ mod tests {
             black_list: None,
         }];
         let target = vec![create_mock_repo("repo-a", "commit-old", None, None)];
-        let args = CliArgs::default();
+        let args = Cli::default();
 
         let result = sync_commits(source, target, &args);
 

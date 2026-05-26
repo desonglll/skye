@@ -74,17 +74,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
                         match ssh_clone_repository(&mut builder, &repo.repo, &specific_path) {
                             Ok(_) => {
-                                info!("successfully cloned {}", &repo.repo);
-                                continue
+                                info!("successfully cloned {}", repo.repo);
+                                continue;
                             },
                             Err(e) => {
                                 error!("error to clone {}: {}", repo.repo, e);
+                                continue;
                             }
                         }
                     }
                 }
                 Err(e) => {
-                    error!("error to create ssh_builder: {}", e)
+                    error!("failed to create ssh_builder: {}", e)
                 },
             }
 

@@ -73,14 +73,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                         let specific_path = clone_dir.as_path().join(Path::new(&repo.repo));
 
                         match ssh_clone_repository(&mut builder, &repo.repo, &specific_path) {
-                            Ok(_) => continue,
+                            Ok(_) => {
+                                info!("successfully cloned {}", repo.repo);
+                                continue;
+                            },
                             Err(e) => {
                                 error!("error to clone {}: {}", repo.repo, e);
+                                continue;
                             }
                         }
                     }
                 }
-                Err(_) => todo!(),
+                Err(e) => {
+                    error!("failed to create ssh_builder: {}", e)
+                },
             }
 
             unimplemented!()

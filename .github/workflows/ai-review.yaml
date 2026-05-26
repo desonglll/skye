@@ -15,21 +15,13 @@ jobs:
     steps:
       - uses: anc95/ChatGPT-CodeReview@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          # 【选填一】如果你使用标准的 OpenAI 或兼容 API（如 DeepSeek/智谱等）
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_ENDPOINT: ${{ secrets.OPENAI_API_ENDPOINT }}
-          MODEL: ${{ secrets.MODEL }} # 建议用双引号包裹模型名称
+          MODEL: ${{ secrets.MODEL }}
 
-          # 【选填二】如果你选择使用 GitHub Models，取消下面两行的注释
-          # USE_GITHUB_MODELS: true
-          # MODEL: openai/gpt-4o
-
-          # 【公共通用配置】
           LANGUAGE: Chinese
 
-          # 使用 | 符号，可以在下方编写多行且包含任意特殊字符的 Prompt
           PROMPT: |
             你是一个严谨的代码审查专家。请检查以下代码 Diff 中是否存在：
             1. 潜在的 Bug 或逻辑漏洞
@@ -41,5 +33,5 @@ jobs:
           temperature: 1
           max_tokens: 10000
           MAX_PATCH_LENGTH: 10000
-          IGNORE_PATTERNS: "**/node_modules/**,**/*.md,**/dist/**" # 建议用双引号包裹 Glob 表达式
-          INCLUDE_PATTERNS: "**/*.js,**/*.ts,**/*.py"               # 显式指定要审查的文件类型
+          IGNORE_PATTERNS: "**/node_modules/**,**/*.md,**/dist/**"
+          INCLUDE_PATTERNS: "**/*.js,**/*.ts,**/*.py,**/*.rs"

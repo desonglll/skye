@@ -5,7 +5,7 @@ use skye::{
     Cli, build_ssh_builder, read_repos_from_file, safe_write_to_file, ssh_clone_repository,
     sync_commits,
 };
-use std::process::exit;
+use std::{path::Path, process::exit};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     unsafe {
@@ -70,7 +70,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                             repo.repo = format!("ssh://{}", repo.repo);
                         }
 
-                        match ssh_clone_repository(&mut builder, &repo.repo, clone_dir.as_path()) {
+                        let specific_path = clone_dir.as_path().join(Path::new(&repo.repo));
+
+                        match ssh_clone_repository(&mut builder, &repo.repo, &specific_path) {
                             Ok(_) => continue,
                             Err(e) => {
                                 error!("error to clone {}: {}", repo.repo, e);

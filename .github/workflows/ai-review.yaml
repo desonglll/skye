@@ -3,7 +3,6 @@ name: Code Review
 permissions:
   contents: read
   pull-requests: write
-  models: true # if you choose use github models, set this to be true
 
 on:
   pull_request:
@@ -11,32 +10,36 @@ on:
 
 jobs:
   test:
-    # if: ${{ contains(github.event.*.labels.*.name, 'gpt review') }} # Optional; to run only when a label is attached
+    # if: ${{ contains(github.event.*.labels.*.name, 'gpt review') }} # 如果需要标签触发，取消本行注释
     runs-on: ubuntu-latest
     steps:
       - uses: anc95/ChatGPT-CodeReview@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # if use github models https://github.com/marketplace/models
+          # 【选填一】如果你使用标准的 OpenAI 或兼容 API（如 DeepSeek/智谱等）
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_ENDPOINT: ${{ secrets.OPENAI_API_ENDPOINT }}
+          MODEL: ${{ secrets.MODEL }} # 建议用双引号包裹模型名称
+
+          # 【选填二】如果你选择使用 GitHub Models，取消下面两行的注释
           # USE_GITHUB_MODELS: true
           # MODEL: openai/gpt-4o
 
-          # else if use azure deployment
-          # AZURE_API_VERSION: xx
-          # AZURE_DEPLOYMENT: xx
-
-          # else use standard llm model
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_ENDPOINT: ${{ secrets.OPENAI_API_ENDPOINT }}
-          MODEL: ${{ secrets.MODEL }} # https://platform.openai.com/docs/models
-
-          # common
+          # 【公共通用配置】
           LANGUAGE: Chinese
-          PROMPT: "Please check if there are any confusions or irregularities in the following code diff:"
-          top_p: 1 # https://platform.openai.com/docs/api-reference/chat/create#chat/create-top_p
-          temperature: 1 # https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature
+
+          # 使用 | 符号，可以在下方编写多行且包含任意特殊字符的 Prompt
+          PROMPT: |
+            你是一个严谨的代码审查专家。请检查以下代码 Diff 中是否存在：
+            1. 潜在的 Bug 或逻辑漏洞
+            2. 性能瓶颈或多余的计算
+            3. 代码可读性和命名规范问题
+            请直接指出问题并给出修改建议，文字请用中文。
+
+          top_p: 1
+          temperature: 1
           max_tokens: 10000
-          MAX_PATCH_LENGTH: 10000 # if the patch/diff length is large than MAX_PATCH_LENGTH, will be ignored and won't review. By default, with no MAX_PATCH_LENGTH set, there is also no limit for the patch/diff length.
-          IGNORE_PATTERNS: /node_modules/**/*,*.md # glob pattern or regex pattern to ignore files, separated by comma
-          INCLUDE_PATTERNS: *.js,*.ts # glob pattern or regex pattern to include files, separated by comma
+          MAX_PATCH_LENGTH: 10000
+          IGNORE_PATTERNS: "**/node_modules/**,**/*.md,**/dist/**" # 建议用双引号包裹 Glob 表达式
+          INCLUDE_PATTERNS: "**/*.js,**/*.ts,**/*.py"               # 显式指定要审查的文件类型
